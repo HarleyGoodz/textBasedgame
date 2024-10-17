@@ -1,0 +1,6 @@
+textBasedGame\Player.class
+textBasedGame\Enemy.class
+textBasedGame\GAME.class
+textBasedGame\window$TitleScreenHandler.class
+textBasedGame\window.class
+textBasedGame\window$ChoiceHandler.class
