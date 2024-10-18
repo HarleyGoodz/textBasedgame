@@ -71,27 +71,23 @@ public class GAME{
                         if (objMush.useMana(10)) {
                             damage = objMush.skillOne(); // Random damage between 30 and 40
                             objKrev.takeDamage(damage);
-                            System.out.println("Musashi uses Soul Pierce! Deals " + damage + " damage.");
                         }
                         break;
                     case 2:
                         if (objMush.useMana(20)) {
                             damage = objMush.skillTwo(); // Random damage between 35 and 45
                             objKrev.takeDamage(damage);
-                            System.out.println("Musashi uses Lifeblood Rend! Deals " + damage + " damage.");
                         }
                         break;
                     case 3:
                         if (objMush.useMana(30)) {
                             damage = objMush.skillThree();// Random damage between 40 and 50
                             objKrev.takeDamage(damage);
-                            System.out.println("Musashi uses Demon Fang Strike! Deals " + damage + " damage.");
                         }
                         break;
                     case 4:
                         damage = objMush.oneHitDelete();
                         objKrev.takeDamage(damage);
-                        System.out.println("Musashi uses ONE HIT DELETE! Deals " + damage + " damage.");
                         break;
                     default:
                         System.out.println("Not enough mana or invalid choice! Choose again.");
@@ -100,9 +96,23 @@ public class GAME{
 
                 // Enemy's turn to attack
                 if (objKrev.getHealth() > 0) {
-                    int enemyDamage = (int) (Math.random() * 15) + 10;  // Random damage between 10 and 25
-                    objMush.takeDamage(enemyDamage);
-                    System.out.println(objKrev.getName() + " strikes! Deals " + enemyDamage + " damage to Musashi.");
+                    int enemyDamage = 0;
+                    int randomPick = (int) (Math.random() * (3 - 1 + 1)) + 1;
+                    switch(randomPick){
+                        case 1:
+                            enemyDamage = objKrev.skillOne();  // Random damage between 10 and 25
+                            objMush.takeDamage(enemyDamage);
+                            break;
+                        case 2:
+                            enemyDamage = objKrev.skillTwo(); // Random damage between 10 and 25
+                            objMush.takeDamage(enemyDamage);
+                            break;
+                        case 3:
+                            enemyDamage = objKrev.skillThree();  // Random damage between 10 and 25
+                            objMush.takeDamage(enemyDamage);
+                            break;
+                        default:
+                    }
                 }
 
                 System.out.println("------------------------------------");
