@@ -8,41 +8,38 @@ package textBasedGame;
  *
  * @author User
  */
-public class Player {
+public abstract class Player {
     
-    private String name;
-    private int health;
-    private int mana;
+    private String Name;
+    private int Health;
+    private int Mana;
+    private int Coins;
+    
+    private int healingPotions; 
+    private int manaPotions;
+    public abstract int getHealingPotions(); 
+    public abstract int getManaPotions();
+    
+    public abstract void restoreHealth(int amount); // Restores health
+    public abstract void restoreMana(int amount); // Restores mana
+    public abstract void setHealingPotions(int potions); // Sets the number of healing potions
+    public abstract void setManaPotions(int potions); 
+    
+    
+    public abstract int skillOne();
+    public abstract int skillTwo();
+    public abstract int skillThree();
+    public abstract int oneHitDelete();
 
-    public Player(String name, int health, int mana) {
-        this.name = name;
-        this.health = health;
-        this.mana = mana;
-    }
+    public abstract boolean useMana(int amount);
 
-    public boolean useMana(int amount) {
-        if (mana >= amount) {
-            mana -= amount;
-            return true;
-        } else {
-            System.out.println("Not enough mana!");
-            return false;
-        }
-    }
+    public abstract void takeDamage(int damage);
 
-    public void takeDamage(int damage) {
-        health -= damage;
-        if (health < 0) health = 0; 
-    }
-
-    public int getHealth() {
-        return health;
-    }
-
-    @Override
-    public String toString() {
-        return name + "'s Health: " + health + " | Mana: " + mana;
-    }
+    public abstract int getHealth();
+    
+    public abstract String getName();
+    
+    public abstract String toString();
+      
 }
     
-

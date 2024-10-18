@@ -180,21 +180,23 @@ public class window {
                 + "as an ancient demonic \nforce stirs beneath the surface, "
                 + "threatening to annihilate all of \nhumanity. ");
         
-        nextButton.setText("Previous");
+        nextButton.setVisible(false);
         secondNextButton.setVisible(true);
         secondNextButton.setText("next");
     }
     
     public void thirdIntro(){
         String position = "thirdIntro";
-        mainTextArea.setText("Now, the battle approaches. Before Musashi stands Krev Malak, the God of Despair. "
+        mainTextArea.setText("Now, the battle approaches. Before Musashi stands Krev Malak,the God of Despair. "
                 + "An ancient entity who thrives on suffering and shadows. Get ready for BATTLE!");  
         
         nextButton.setVisible(false);
-        secondNextButton.setText("Previous");
+        secondNextButton.setVisible(false);
         thirdNextButton.setVisible(true);
         thirdNextButton.setText("FIGHT!");
     }
+    
+    
   
     
 }

@@ -4,37 +4,22 @@
  */
 package textBasedGame;
 
-/**
- *
- * @author User
- */
-public class Enemy {
-    private String name;
-    private int health;
 
-    public Enemy(String name, int health) {
-        this.name = name;
-        this.health = health;
-    }
+public abstract class Enemy {
+    private int Health;
+    private String Name;
+    
+    public abstract int skillOne();
+    public abstract int skillTwo();
+    public abstract int skillThree();
+    
+    public abstract void takeDamage(int damage);
 
-    public void takeDamage(int damage) {
-        health -= damage;
-        if (health < 0) health = 0; // Prevent negative health
-    }
+    public abstract int getHealth();
+    
+    public abstract String getName();
 
-    public int getHealth() {
-        return health;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    @Override
-    public String toString() {
-        return name + "'s Health: " + health;
-    }
+    public abstract String toString();
 }
     
     
-
