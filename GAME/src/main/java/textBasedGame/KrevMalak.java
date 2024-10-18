@@ -18,6 +18,33 @@ public class KrevMalak extends Enemy {
     }
     
     @Override
+    public int skillOne(){
+        int skillOneDamage = (int) (Math.random() * (20 - 15 + 1)) + 15;
+        
+        System.out.println("Krev Malak uses Shadow Manipulation! Deals " + skillOneDamage + " damage.");
+        
+        return skillOneDamage;
+    }
+    
+    @Override
+    public int skillTwo(){
+        int skillTwoDamage = (int) (Math.random() * (30 - 20 + 1)) + 20;
+        
+        System.out.println("Krev Malak uses Demon Summoning! Deals " + skillTwoDamage + " damage.");
+        
+        return skillTwoDamage;
+    }
+    
+    @Override
+    public int skillThree(){
+        int skillThreeDamage = (int) (Math.random() * (50 - 30 + 1)) + 30;
+        
+        System.out.println("Krev Malak uses Despair Aura! Deals " + skillThreeDamage + " damage.");
+        
+        return skillThreeDamage;
+    }
+    
+    @Override
     public void takeDamage(int damage){
         Health -= damage;
         

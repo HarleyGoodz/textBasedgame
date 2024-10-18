@@ -12,6 +12,10 @@ public abstract class Enemy {
     private int Health;
     private String Name;
     
+    public abstract int skillOne();
+    public abstract int skillTwo();
+    public abstract int skillThree();
+    
     public abstract void takeDamage(int damage);
 
     public abstract int getHealth();

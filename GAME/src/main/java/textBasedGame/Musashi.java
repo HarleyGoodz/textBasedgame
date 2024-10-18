@@ -25,21 +25,27 @@ public class Musashi extends Player {
     
     @Override
     public int skillOne(){
-        int skillOneDamage = ran.nextInt(40);
+        int skillOneDamage = (int) (Math.random() * (40 - 30 + 1)) + 30;
+        
+        System.out.println("Musashi uses Soul Pierce! Deals " + skillOneDamage + " damage.");
         
         return skillOneDamage;
     }
     
     @Override
     public int skillTwo(){
-        int skillTwoDamage = ran.nextInt(45);
+        int skillTwoDamage = (int) (Math.random() * (45 - 35 + 1)) + 35;
+        
+        System.out.println("Musashi uses Lifeblood Rend! Deals " + skillTwoDamage + " damage.");
         
         return skillTwoDamage;
     }
     
     @Override
     public int skillThree(){
-        int skillThreeDamage = ran.nextInt(50);
+        int skillThreeDamage = (int) (Math.random() * (50 - 40 + 1)) + 40;
+        
+        System.out.println("Musashi uses Demon Fang Strike! Deals " + skillThreeDamage + " damage.");
         
         return skillThreeDamage;
     }
@@ -47,6 +53,8 @@ public class Musashi extends Player {
     
     @Override
     public int oneHitDelete(){
+        
+        System.out.println("Musashi uses ONE HIT DELETE! Deals ∞ damage.");
         
         return 1000;
     }
