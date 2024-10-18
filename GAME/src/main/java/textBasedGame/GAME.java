@@ -4,8 +4,10 @@ import java.util.Scanner;
 
 public class GAME{
     Musashi objMush = new Musashi("Musashi Miyamoto", 100, 100);
-    KrevMalak objKrev = new KrevMalak("Krev Malak",100);
-    
+    KrevMalak objKrev = new KrevMalak("Krev Malak",150);
+    Kappa objKappa = new Kappa("Kappa", 100);
+    Hyosube objHyo = new Hyosube("Hyosube", 100);
+   
     Scanner scanner = new Scanner(System.in);    
     
 
@@ -46,10 +48,148 @@ public class GAME{
         System.out.println("Press Enter to continue.");
         scanner.nextLine();
 
-        turnBasedBattle();
+        wallOne();
     }
 
-    private void turnBasedBattle() {
+    private void wallOne() {
+        while (objKappa.getHealth() > 0 && objMush.getHealth() > 0){
+            System.out.println(objMush.toString());
+            System.out.println(objKappa.toString());
+            
+            System.out.println("Choose your action: ");
+            System.out.println("1. Use Soul Pierce (30-40 damage, 10 mana)");
+            System.out.println("2. Use Lifeblood Rend (35-45 damage, 20 mana)");
+            System.out.println("3. Use Demon Fang Strike (40-50 damage, 30 mana)");
+            System.out.println("4. ONE HIT DELETE");
+            System.out.print("Enter your choice: ");
+            
+            try {
+                int skillChoice = scanner.nextInt();
+                scanner.nextLine();  // Consume newline
+
+                int damage = 0;
+                switch (skillChoice) {
+                    case 1:
+                        if (objMush.useMana(10)) {
+                            damage = objMush.skillOne(); // Random damage between 30 and 40
+                            objKappa.takeDamage(damage);
+                        }
+                        break;
+                    case 2:
+                        if (objMush.useMana(20)) {
+                            damage = objMush.skillTwo(); // Random damage between 35 and 45
+                            objKappa.takeDamage(damage);
+                        }
+                        break;
+                    case 3:
+                        if (objMush.useMana(30)) {
+                            damage = objMush.skillThree();// Random damage between 40 and 50
+                            objKappa.takeDamage(damage);
+                        }
+                        break;
+                    case 4:
+                        damage = objMush.oneHitDelete();
+                        objKappa.takeDamage(damage);
+                        break;
+                    default:
+                        System.out.println("Not enough mana or invalid choice! Choose again.");
+                        continue;
+                }
+
+                // Enemy's turn to attack
+                if (objKappa.getHealth() > 0) {
+                    int enemyDamage = 0;
+                    enemyDamage = objKappa.skillOne();  // Random damage between 10 and 25
+                    objMush.takeDamage(enemyDamage);
+                }
+
+                System.out.println("------------------------------------");
+
+                // Check if either has fallen
+                if (objMush.getHealth() <= 0) {
+                    System.out.println("Musashi has fallen. " + objKappa.getName() + " prevails.");
+                    break;
+                } else if (objKappa.getHealth() <= 0) {
+                    System.out.println("Musashi has defeated " + objKappa.getName() + "! Musashi Advances");
+                    // Rewards logic can go here (e.g., coins)
+                    break;
+                }
+            } catch (Exception e) {
+                System.out.println("Invalid input! Please enter a valid number.");
+                scanner.nextLine();  // Clear the buffer
+            }
+        }
+        
+        
+        while (objHyo.getHealth() > 0 && objMush.getHealth() > 0){
+            System.out.println(objMush.toString());
+            System.out.println(objHyo.toString());
+            
+            System.out.println("Choose your action: ");
+            System.out.println("1. Use Soul Pierce (30-40 damage, 10 mana)");
+            System.out.println("2. Use Lifeblood Rend (35-45 damage, 20 mana)");
+            System.out.println("3. Use Demon Fang Strike (40-50 damage, 30 mana)");
+            System.out.println("4. ONE HIT DELETE");
+            System.out.print("Enter your choice: ");
+            
+            try {
+                int skillChoice = scanner.nextInt();
+                scanner.nextLine();  // Consume newline
+
+                int damage = 0;
+                switch (skillChoice) {
+                    case 1:
+                        if (objMush.useMana(10)) {
+                            damage = objMush.skillOne(); // Random damage between 30 and 40
+                            objHyo.takeDamage(damage);
+                        }
+                        break;
+                    case 2:
+                        if (objMush.useMana(20)) {
+                            damage = objMush.skillTwo(); // Random damage between 35 and 45
+                            objHyo.takeDamage(damage);
+                        }
+                        break;
+                    case 3:
+                        if (objMush.useMana(30)) {
+                            damage = objMush.skillThree();// Random damage between 40 and 50
+                            objHyo.takeDamage(damage);
+                        }
+                        break;
+                    case 4:
+                        damage = objMush.oneHitDelete();
+                        objHyo.takeDamage(damage);
+                        break;
+                    default:
+                        System.out.println("Not enough mana or invalid choice! Choose again.");
+                        continue;
+                }
+
+                // Enemy's turn to attack
+                if (objHyo.getHealth() > 0) {
+                    int enemyDamage = 0;
+                    enemyDamage = objHyo.skillOne();  // Random damage between 10 and 25
+                    objMush.takeDamage(enemyDamage);
+                }
+
+                System.out.println("------------------------------------");
+
+                // Check if either has fallen
+                if (objMush.getHealth() <= 0) {
+                    System.out.println("Musashi has fallen. " + objHyo.getName() + " prevails.");
+                    break;
+                } else if (objHyo.getHealth() <= 0) {
+                    System.out.println("Musashi has defeated " + objHyo.getName() + "! Musashi Advances");
+                    // Rewards logic can go here (e.g., coins)
+                    break;
+                }
+            } catch (Exception e) {
+                System.out.println("Invalid input! Please enter a valid number.");
+                scanner.nextLine();  // Clear the buffer
+            }
+        }
+             
+    
         while (objKrev.getHealth() > 0 && objMush.getHealth() > 0) {
             System.out.println(objMush.toString());
             System.out.println(objKrev.toString());
