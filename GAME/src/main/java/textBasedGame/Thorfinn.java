@@ -8,25 +8,24 @@ package textBasedGame;
  *
  * @author Silent Voice
  */
-import java.util.Random;
-public class Musashi extends Player {
-    private String Name;
+public class Thorfinn extends Player{
     private int Health;
     private int Mana;
-    //private int Coins;
+    private String Name;
     
-    public Musashi(String Name, int Health, int Mana){
+    
+    public Thorfinn(String Name, int Health, int Mana){
         this.Name = Name;
         this.Health = Health;
         this.Mana = Mana;
-        //this.Coins = Coins;
     }
+    
     
     @Override
     public int skillOne(){
         int skillOneDamage = (int) (Math.random() * (40 - 30 + 1)) + 30;
         
-        System.out.println("Musashi uses Soul Pierce! Deals " + skillOneDamage + " damage.");
+        System.out.println("Thorfinn uses Whirlwind Cleave! Deals " + skillOneDamage + " damage.");
         
         return skillOneDamage;
     }
@@ -35,7 +34,7 @@ public class Musashi extends Player {
     public int skillTwo(){
         int skillTwoDamage = (int) (Math.random() * (45 - 35 + 1)) + 35;
         
-        System.out.println("Musashi uses Lifeblood Rend! Deals " + skillTwoDamage + " damage.");
+        System.out.println("Thorfinn uses Seismic Strike! Deals " + skillTwoDamage + " damage.");
         
         return skillTwoDamage;
     }
@@ -44,16 +43,15 @@ public class Musashi extends Player {
     public int skillThree(){
         int skillThreeDamage = (int) (Math.random() * (50 - 45 + 1)) + 45;
         
-        System.out.println("Musashi uses Demon Fang Strike! Deals " + skillThreeDamage + " damage.");
+        System.out.println("Thorfinn uses Blade Tempest! Deals " + skillThreeDamage + " damage.");
         
         return skillThreeDamage;
     }
     
-    
     @Override
     public int oneHitDelete(){
         
-        System.out.println("Musashi uses ONE HIT DELETE! Deals ∞ damage.");
+        System.out.println("Thorfinn uses One Hit Delete! Deals ∞ damage.");
         
         return 1000;
     }
@@ -61,7 +59,7 @@ public class Musashi extends Player {
     @Override
     public boolean useMana(int amount){
         if(Mana >= amount){
-            Mana -= amount;
+            Mana -= amount; 
             return true;
         }
         else{
@@ -83,7 +81,7 @@ public class Musashi extends Player {
         return Health;
     }
     
-    @Override
+    @Override 
     public String getName(){
         return Name;
     }
@@ -92,5 +90,4 @@ public class Musashi extends Player {
     public String toString(){
         return Name + "'s Health: " + Health + " | " + "Mana: " + Mana;
     }
-    
 }
