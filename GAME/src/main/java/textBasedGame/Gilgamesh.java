@@ -9,14 +9,9 @@ package textBasedGame;
  * @author Silent Voice
  */
 public class Gilgamesh extends Player{
-    private int Health;
-    private int Mana;
-    private String Name;
     
     public Gilgamesh(String Name, int Health, int Mana){
-        this.Name = Name;
-        this.Health = Health;
-        this.Mana = Mana;
+        super(Name, Health, Mana);
     }
     
     
@@ -54,40 +49,5 @@ public class Gilgamesh extends Player{
         System.out.println("Gilgamesh uses ONE HIT DELETE! Deals ∞ damage.");
         
         return 1000;
-    }
-    
-    @Override
-    public boolean useMana(int amount){
-        if(Mana >= amount){
-            Mana -= amount;
-            return true;
-        }
-        else{
-            System.out.println("Not enough mana!");
-            return false;
-        }
-    }
-    
-    @Override
-    public void takeDamage(int damage){
-        Health -= damage;
-        
-        if(Health < 0)
-            Health = 0;
-    }
-    
-    @Override
-    public int getHealth(){
-        return Health;
-    }
-    
-    @Override
-    public String getName(){
-        return Name;
-    }
-    
-    @Override
-    public String toString(){
-        return Name + "'s Health: " + Health + " | " + "Mana: " + Mana;
     }
 }
