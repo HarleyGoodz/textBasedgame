@@ -8,17 +8,12 @@ package textBasedGame;
  *
  * @author Silent Voice
  */
-import java.util.Random;
+
 public class Musashi extends Player {
-    private String Name;
-    private int Health;
-    private int Mana;
     //private int Coins;
     
     public Musashi(String Name, int Health, int Mana){
-        this.Name = Name;
-        this.Health = Health;
-        this.Mana = Mana;
+        super(Name, Health, Mana);
         //this.Coins = Coins;
     }
     
@@ -56,41 +51,6 @@ public class Musashi extends Player {
         System.out.println("Musashi uses ONE HIT DELETE! Deals ∞ damage.");
         
         return 1000;
-    }
-    
-    @Override
-    public boolean useMana(int amount){
-        if(Mana >= amount){
-            Mana -= amount;
-            return true;
-        }
-        else{
-            System.out.println("Not enough mana!");
-            return false;
-        }
-    }
-    
-    @Override
-    public void takeDamage(int damage){
-        Health -= damage;
-        
-        if(Health < 0)
-            Health = 0;
-    }
-    
-    @Override
-    public int getHealth(){
-        return Health;
-    }
-    
-    @Override
-    public String getName(){
-        return Name;
-    }
-    
-    @Override
-    public String toString(){
-        return Name + "'s Health: " + Health + " | " + "Mana: " + Mana;
     }
     
 }
