@@ -1,19 +1,67 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
 package textBasedGame;
 
+/**
+ *
+ * @author Silent Voice
+ */
 import java.util.Scanner;
-
-public class Battle2 {
+import java.util.Random;
+public class Thorfinn extends Player {
+   
+    
+    public Thorfinn(String Name, int Health, int Mana){
+        super(Name, Health, Mana);
+    }
     
     
+    @Override
+    public int skillOne(){
+        int skillOneDamage = (int) (Math.random() * (40 - 30 + 1)) + 30;
+        
+        System.out.println("Thorfinn uses Whirlwind Cleave! Deals " + skillOneDamage + " damage.");
+        
+        return skillOneDamage;
+    }
     
-    public void thornfinn_Introduction(Thorfinn thorn){
+    @Override
+    public int skillTwo(){
+        int skillTwoDamage = (int) (Math.random() * (45 - 35 + 1)) + 35;
+        
+        System.out.println("Thorfinn uses Seismic Strike! Deals " + skillTwoDamage + " damage.");
+        
+        return skillTwoDamage;
+    }
+    
+    @Override
+    public int skillThree(){
+        int skillThreeDamage = (int) (Math.random() * (50 - 45 + 1)) + 45;
+        
+        System.out.println("Thorfinn uses Blade Tempest! Deals " + skillThreeDamage + " damage.");
+        
+        return skillThreeDamage;
+    }
+    
+    @Override
+    public int oneHitDelete(){
+        
+        System.out.println("Thorfinn uses One Hit Delete! Deals ∞ damage.");
+        
+        return 1000;
+    }
+    
+    public void thornfinn_Introduction(){
             Scanner scanner = new Scanner(System.in);
         
-        System.out.println("-----------------------------------------------");
+        System.out.println("------------------BACKSTORY-----------------------------");
         System.out.println("Thorn was once a man of peace, a master of the sword who valued family above all else.\n"
                 + " His world shattered when his father's most trusted ally betrayed them, \n "
                 + "press 'Enter' to continue....");
         scanner.nextLine();
+  
         System.out.println("-------------------------------------------------");
         
         System.out.println("-----------------------------------------------");
@@ -24,55 +72,18 @@ public class Battle2 {
         System.out.println("-------------------------------------------------");
         
         System.out.println("-----------------------------------------------");
-        System.out.println(" His only goal is to find and kill the betrayer who took everything from him. \n"
+        System.out.println("His only goal is to find and kill the betrayer who took everything from him,"
+                + "and ending those spread evil.\n"
                 + "But Thorn’s journey will lead him to realize that his rage, \n"
                 + "while powerful, is not the only thing that can forge his destiny.\n"
                 + "press 'Enter' to continue....");
         scanner.nextLine();
         System.out.println("-------------------------------------------------");
         
-        System.out.println("-----------------------------------------------");
-        System.out.println("and that betrayer is.... Zorath Valesk, The Betrayer\n"
-                + "press 'Enter' to continue....");
-        scanner.nextLine();
-        System.out.println("-------------------------------------------------");
-        
-        System.out.println("-----------------------------------------------");
-        System.out.println("serving alongside Thorn Finland's father in their war against the demons.\n"
-                + " However, Zorath’s hunger for power grew uncontrollably\n"
-                + "press 'Enter' to continue....");
-        scanner.nextLine();
-        System.out.println("-------------------------------------------------");
-        
-        System.out.println("-----------------------------------------------");
-        System.out.println("he made a secret pact with a powerful demonic entity to overthrow the kingdom. \n"
-                + "When Thorn's father discovered this betrayal\n"
-                + "press 'Enter' to continue....");
-        scanner.nextLine();
-        System.out.println("-------------------------------------------------");
-        
-        System.out.println("-----------------------------------------------");
-        System.out.println("Zorath ambushed and murdered him, escaping into the wilds to amass an army of his own.\n"
-                + "press 'Enter' to continue....");
-        scanner.nextLine();
-        System.out.println("-------------------------------------------------");
-        
-        System.out.println("-----------------------------------------------");
-        System.out.println("And now... Thorn has finally arrived at his domain,"
-                + "full of rage, and anger."
-                + "ready to fight, ready to kill....\n"
-                + "press 'Enter' to continue....");
-        scanner.nextLine();
-        System.out.println("-------------------------------------------------");
-        
-        System.out.println("-----------------------------------------------");
-        System.out.println("Thorn charges at Zorath starting a savage battle.... ready yourself.\n"
-                + "press 'Enter' to FIGHT!!!");
-        scanner.nextLine();
-        System.out.println("-------------------------------------------------");
-        }
+    }
 
     public void thorfinn_ending(Thorfinn thorn){
+        
         Scanner scanner = new Scanner(System.in);
         System.out.println("-----------------------------------------------");
         System.out.println("As Thorfinn stands over the fallen body of his father’s betrayer, \n"
@@ -120,7 +131,7 @@ public class Battle2 {
         System.out.println("-----------------------------------------------");
         System.out.println("With a grimace, Thorn drives his sword into the earth beside the betrayer, no longer needing it. \n"
                 + "I came here to kill you, to end this"
-                + "Thorn says, his voice low but steady. But now I see that killing you isn’t the end of my journey.\n"
+                + " Thorfinn says, his voice low but steady. But now I see that killing you isn’t the end of my journey.\n"
                 + "press 'Enter' to continue");
         scanner.nextLine();
         System.out.println("-------------------------------------------------");
@@ -134,8 +145,9 @@ public class Battle2 {
         
         System.out.println("-----------------------------------------------");
         System.out.println("He looks to the horizon, where the sun is just beginning to rise. A new dawn, a new chapter.\n"
-                + "Thorn is no longer bound by the past. He is no longer a slave to rage. His destiny,\n"
-                + "he realizes, will be forged not by the blood he sheds, but by the choices he makes from here on.");
+                + " Thorn is no longer bound by the past. He is no longer a slave to rage. His destiny,\n"
+                + " he realizes, will be forged not by the blood he sheds, but by the choices he makes from here on."
+                + "\npress 'Enter' to end the journey....");
         scanner.nextLine();
         System.out.println("-------------------------------------------------");
         
@@ -147,8 +159,8 @@ public class Battle2 {
         
         
     }
-
     
-
     
 }
+
+    

@@ -8,6 +8,7 @@ package textBasedGame;
  *
  * @author Silent Voice
  */
+import java.util.Scanner;
 public class KrevMalak extends Enemy {
     private int Health;
     private String Name;
@@ -65,6 +66,52 @@ public class KrevMalak extends Enemy {
     @Override
     public String toString(){
         return Name + "'s Health: " + Health;
+    }
+    
+    public void Krev_BackStory(){
+        
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("----------------BACKSTORY-------------------------------");
+        System.out.println("Krev Malak, a god who is blinded by greed and an insatiable hunger for power. \n"
+                + "The more suffering he caused, the more powerful he became, feeding off the fear and hopelessness of his victims."
+                + "\n press 'Enter to continue");
+        scanner.nextLine();
+        
+        System.out.println("-----------------------------------------------");
+        System.out.println("one that went beyond personal gain,he would become the embodiment of despair itself,\n"
+                + " a living nightmare capable of plunging the world into endless darkness. \n"
+                + "press 'Enter' to continue");
+        scanner.nextLine();
+    }
+    
+    public void Krev_IncomingBattle(){
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.println("-----------------------------------------------");
+        System.out.println("As you spot Krev Malak seated on his throne, a massive battle looms,\n"
+                + " shrouded in shadows and flames. With a fierce charge, you teleported to Krev,\n"
++ "unleashing your skills in a devastating attack aimed at annihilating the god somehow, Krev blocked your attack...\n"
+               + "-----------------------------------------------\n"
+                + "PREPARE FOR BATTLE!\n"
++ "press 'Enter' to FIGHT!");
+        scanner.nextLine();
+    }
+    
+    public void Krev_Defeat(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("-------------------VICTORY ENDING----------------------------");
+        System.out.println("Finally, the God of Despair can prevail no more\n"
+                + "As Krev lies defeated, you stood at the edge of victory and honor, while Krev is in the brink of death,\n"
+                + "the connection between the underworld and the mortal realm is weakened,"
+                + "\n press 'Enter to continue");
+        scanner.nextLine();
+        
+      
+        System.out.println("-----------------------------------------------");
+        System.out.println("The victory is sweet, a glorious battle indeed.\n"
+                + "you sheath your weapon and walked away, leaving the body of Krev Malak behind, knowing that the real fight has just begun.\n"
+                + "press 'Enter' to end the journey");
+        scanner.nextLine();
     }
     
 }

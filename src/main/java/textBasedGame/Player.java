@@ -13,33 +13,48 @@ public abstract class Player {
     private String Name;
     private int Health;
     private int Mana;
-    private int Coins;
+    //private int Coins;
     
-    private int healingPotions; 
-    private int manaPotions;
-    public abstract int getHealingPotions(); 
-    public abstract int getManaPotions();
-    
-    public abstract void restoreHealth(int amount); // Restores health
-    public abstract void restoreMana(int amount); // Restores mana
-    public abstract void setHealingPotions(int potions); // Sets the number of healing potions
-    public abstract void setManaPotions(int potions); 
-    
+    public Player(String Name, int Health, int Mana){
+        this.Name = Name;
+        this.Health = Health;
+        this.Mana = Mana;
+    }
     
     public abstract int skillOne();
     public abstract int skillTwo();
     public abstract int skillThree();
     public abstract int oneHitDelete();
 
-    public abstract boolean useMana(int amount);
+    public boolean useMana(int amount){
+        if(Mana >= amount){
+            Mana -= amount;
+            return true;
+        }
+        else{
+            System.out.println("Not enough mana!");
+            return false;
+        }
+    }
 
-    public abstract void takeDamage(int damage);
+    public void takeDamage(int damage){
+        Health -= damage;
+        
+        if(Health < 0)
+            Health = 0;
+    }
 
-    public abstract int getHealth();
+    public int getHealth(){
+        return Health;
+    }
     
-    public abstract String getName();
+    public String getName(){
+        return Name;
+    }
     
-    public abstract String toString();
+    public String toString(){
+        return Name + "'s Health: " + Health + " | " + "Mana: " + Mana;
+    }
       
 }
     

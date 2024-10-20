@@ -8,18 +8,12 @@ package textBasedGame;
  *
  * @author Silent Voice
  */
+import java.util.Scanner;
 import java.util.Random;
 public class Musashi extends Player {
-    Random ran = new Random();
-    private String Name;
-    private int Health;
-    private int Mana;
-    //private int Coins;
     
     public Musashi(String Name, int Health, int Mana){
-        this.Name = Name;
-        this.Health = Health;
-        this.Mana = Mana;
+        super(Name, Health, Mana);
         //this.Coins = Coins;
     }
     
@@ -31,24 +25,27 @@ public class Musashi extends Player {
         
         return skillOneDamage;
     }
+    //private int Coins;
     
     @Override
     public int skillTwo(){
         int skillTwoDamage = (int) (Math.random() * (45 - 35 + 1)) + 35;
         
         System.out.println("Musashi uses Lifeblood Rend! Deals " + skillTwoDamage + " damage.");
+        
         return skillTwoDamage;
     }
     
+    
+    
     @Override
     public int skillThree(){
-        int skillThreeDamage = (int) (Math.random() * (50 - 40 + 1)) + 40;
+        int skillThreeDamage = (int) (Math.random() * (50 - 45 + 1)) + 45;
         
         System.out.println("Musashi uses Demon Fang Strike! Deals " + skillThreeDamage + " damage.");
-
+        
         return skillThreeDamage;
     }
-    
     
     @Override
     public int oneHitDelete(){
@@ -58,69 +55,58 @@ public class Musashi extends Player {
         return 1000;
     }
     
-    @Override
-    public boolean useMana(int amount){
-        if(Mana >= amount){
-            Mana -= amount;
-            return true;
-        }
-        else{
-            System.out.println("Not enough mana!");
-            return false;
-        }
-    }
-    
-    @Override
-    public void takeDamage(int damage){
-        Health -= damage;
+    public void Musashi_intro() {
         
-        if(Health < 0)
-            Health = 0;
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.println("--------------------BACKSTORY---------------------------");
+        System.out.println("Once a proud warrior, Musashi fell into darkness when he became a puppet for the demonic realm. \n"
+                + "Bound by a curse, every kill of a demon brings him closer to reclaiming his lost humanity,"
+                + "\n press 'Enter to continue");
+        scanner.nextLine();
+        
+        System.out.println("-----------------------------------------------");
+        System.out.println("with each demon slain restoring a part of his fragmented body. He fights, not for glory, \n"
+                + " but for the hope of breaking the curse that chains him to the underworld."
+                + "\n press 'Enter to continue");
+        scanner.nextLine();
+        
+        System.out.println("-----------------------------------------------");
+        System.out.println("But as his body returns, so too does the madness lurking deep within,\n"
+                + " forcing him to walk the line between redemption and damnation."
+                + "\n press 'Enter' to continue");
+        scanner.nextLine();
+        
+        System.out.println("-----------------------------------------------");
+        System.out.println("Musashi is in a journey to end this ugly curse, by killing all the demons that interferes on his path\n"
+                + "restoring his lost humanity..."
+                + "\n press 'Enter' to continue");
+        scanner.nextLine();
     }
     
-    @Override
-    public int getHealth(){
-        return Health;
+    public void Musashi_KrevMalak_Encounter(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("-----------------------------------------------");
+        System.out.println("After defeating the demons that distrubs Musashi's path, he now continues his journey/\n"
+                + "regaining 25% of his humanity, but the sanity of the shadows are increasing..."
+                + "\n press 'Enter' to continue");
+        scanner.nextLine();
+        
+        
+        System.out.println("-----------------------------------------------");
+        System.out.println(""
+                + "\n press 'Enter' to continue");
+        scanner.nextLine();
     }
     
-    @Override
-    public String getName(){
-        return Name;
-    }
     
-    @Override
-    public String toString(){
-        return Name + "'s Health: " + Health + " | " + "Mana: " + Mana;
-    }
 
-    @Override
-    public int getHealingPotions() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
 
-    @Override
-    public int getManaPotions() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
+    
+    
+    
+    
 
-    @Override
-    public void restoreHealth(int amount) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    @Override
-    public void restoreMana(int amount) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    @Override
-    public void setHealingPotions(int potions) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    @Override
-    public void setManaPotions(int potions) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
+   
     
 }
