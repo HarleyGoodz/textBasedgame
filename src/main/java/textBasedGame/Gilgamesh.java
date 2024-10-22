@@ -52,8 +52,8 @@ public class Gilgamesh extends Player{
         return 1000;
     }
     
-   
-     void Gilgla_intro(){
+    @Override
+    public void intro(){
          Scanner scanner = new Scanner(System.in);
          
          System.out.println("-------------------BACKSTORY----------------------------");
@@ -78,8 +78,9 @@ public class Gilgamesh extends Player{
         
          
     }
-    
-     void Gilga_ending(){
+     
+    @Override
+    public void epilogue(){
          Scanner scanner = new Scanner(System.in);
           System.out.println("-----------------------------------------------");
         System.out.println(". After annihilating the demonic forces and standing as the savior of the world,\n"

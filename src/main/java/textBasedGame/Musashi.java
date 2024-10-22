@@ -9,12 +9,10 @@ package textBasedGame;
  * @author Silent Voice
  */
 import java.util.Scanner;
-import java.util.Random;
 public class Musashi extends Player {
     
     public Musashi(String Name, int Health, int Mana){
         super(Name, Health, Mana);
-        //this.Coins = Coins;
     }
     
     @Override
@@ -25,7 +23,6 @@ public class Musashi extends Player {
         
         return skillOneDamage;
     }
-    //private int Coins;
     
     @Override
     public int skillTwo(){
@@ -55,7 +52,8 @@ public class Musashi extends Player {
         return 1000;
     }
     
-    public void Musashi_intro() {
+    @Override
+    public void intro() {
         
         Scanner scanner = new Scanner(System.in);
         
@@ -84,19 +82,10 @@ public class Musashi extends Player {
         scanner.nextLine();
     }
     
-    public void Musashi_KrevMalak_Encounter(){
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("-----------------------------------------------");
-        System.out.println("After defeating the demons that distrubs Musashi's path, he now continues his journey/\n"
-                + "regaining 25% of his humanity, but the sanity of the shadows are increasing..."
-                + "\n press 'Enter' to continue");
-        scanner.nextLine();
+    
+    @Override
+    public void epilogue(){
         
-        
-        System.out.println("-----------------------------------------------");
-        System.out.println(""
-                + "\n press 'Enter' to continue");
-        scanner.nextLine();
     }
     
     

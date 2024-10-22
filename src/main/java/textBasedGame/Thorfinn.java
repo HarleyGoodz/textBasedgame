@@ -9,7 +9,6 @@ package textBasedGame;
  * @author Silent Voice
  */
 import java.util.Scanner;
-import java.util.Random;
 public class Thorfinn extends Player {
    
     
@@ -53,7 +52,8 @@ public class Thorfinn extends Player {
         return 1000;
     }
     
-    public void thornfinn_Introduction(){
+    @Override
+    public void intro(){
             Scanner scanner = new Scanner(System.in);
         
         System.out.println("------------------BACKSTORY-----------------------------");
@@ -82,7 +82,8 @@ public class Thorfinn extends Player {
         
     }
 
-    public void thorfinn_ending(Thorfinn thorn){
+    @Override
+    public void epilogue(){
         
         Scanner scanner = new Scanner(System.in);
         System.out.println("-----------------------------------------------");

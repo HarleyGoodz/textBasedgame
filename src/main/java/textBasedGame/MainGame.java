@@ -15,9 +15,6 @@ public class MainGame {
         storyOne objWallOne = new storyOne();
         storyTwo objWallTwo = new storyTwo();
         
-        Musashi musashi = new Musashi("Musashi Miyamoto", 0, 0);
-        Thorfinn thorfinn = new Thorfinn("Thorfinn Finland", 0,0);
-        Gilgamesh gilga = new Gilgamesh("Gilgamesh",0,0);
         int choice = 0;
         
         boolean isEnabled = true;
@@ -67,21 +64,20 @@ public class MainGame {
         Player playerCharacter = null;
 
         switch (choice) {
-            case 1:
-                
-            playerCharacter = new Musashi("Musashi Miyamoto", 100, 100);
-            musashi.Musashi_intro();
-            
+            case 1:  
+                playerCharacter = new Musashi("Musashi Miyamoto", 100, 100);
+                playerCharacter.intro();
                 
                 break;
             case 2:
                 playerCharacter = new Thorfinn("Thorfinn", 150, 100);
-                thorfinn.thornfinn_Introduction();
+                playerCharacter.intro();
                 
                 break;
             case 3:
                 playerCharacter = new Gilgamesh("Gilgamesh", 100, 200);
-                 gilga.Gilgla_intro();
+                playerCharacter.intro();
+                
                 break;
             default:
                 System.out.println("Invalid choice.");

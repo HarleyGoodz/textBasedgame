@@ -25,6 +25,10 @@ public abstract class Player {
     public abstract int skillTwo();
     public abstract int skillThree();
     public abstract int oneHitDelete();
+    
+    public abstract void intro();
+    
+    public abstract void epilogue();
 
     public boolean useMana(int amount){
         if(Mana >= amount){
