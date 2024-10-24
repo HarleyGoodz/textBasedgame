@@ -14,6 +14,7 @@ public class MainGame {
         Scanner scan = new Scanner(System.in);
         storyOne objWallOne = new storyOne();
         storyTwo objWallTwo = new storyTwo();
+        storyThree objWallThree = new storyThree();
         
         int choice = 0;
         
@@ -88,5 +89,7 @@ public class MainGame {
         objWallOne.wallOne(playerCharacter);
         
         objWallTwo.wallTwo(playerCharacter);
+        
+        objWallThree.wallThree(playerCharacter);
     }
 }

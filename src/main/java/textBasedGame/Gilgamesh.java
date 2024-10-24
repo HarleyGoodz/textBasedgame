@@ -10,6 +10,9 @@ package textBasedGame;
  */
 import java.util.Scanner;
 public class Gilgamesh extends Player{
+    private String skillOneName = "Stellar Rift";
+    private String skillTwoName = "Astral Surge";
+    private String skillThreeName = "Celestial Binding";
     
     public Gilgamesh(String Name, int Health, int Mana){
         super(Name, Health, Mana);
@@ -50,6 +53,21 @@ public class Gilgamesh extends Player{
         System.out.println("Gilgamesh uses ONE HIT DELETE! Deals ∞ damage.");
         
         return 1000;
+    }
+    
+    @Override
+    public String skillOneName(){
+        return skillOneName;
+    }
+    
+    @Override 
+    public String skillTwoName(){
+        return skillTwoName;
+    }
+    
+    @Override
+    public String skillThreeName(){
+        return skillThreeName;
     }
     
     @Override

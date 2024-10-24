@@ -29,6 +29,10 @@ public abstract class Player {
     public abstract void intro();
     
     public abstract void epilogue();
+    
+    public abstract String skillOneName();
+    public abstract String skillTwoName();
+    public abstract String skillThreeName();
 
     public boolean useMana(int amount){
         if(Mana >= amount){

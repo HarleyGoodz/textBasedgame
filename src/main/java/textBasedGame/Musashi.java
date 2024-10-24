@@ -10,6 +10,10 @@ package textBasedGame;
  */
 import java.util.Scanner;
 public class Musashi extends Player {
+    private String skillOneName = "Soul Pierce";
+    private String skillTwoName = "Lifeblood Rend";
+    private String skillThreeName = "Demon Fang Strike";
+            
     
     public Musashi(String Name, int Health, int Mana){
         super(Name, Health, Mana);
@@ -51,6 +55,22 @@ public class Musashi extends Player {
         
         return 1000;
     }
+    
+    @Override
+    public String skillOneName(){
+        return skillOneName;
+    }
+    
+    @Override 
+    public String skillTwoName(){
+        return skillTwoName;
+    }
+    
+    @Override
+    public String skillThreeName(){
+        return skillThreeName;
+    }
+    
     
     @Override
     public void intro() {

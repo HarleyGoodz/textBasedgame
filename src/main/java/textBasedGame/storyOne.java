@@ -25,9 +25,9 @@ public class storyOne {
             System.out.println(objKappa.toString());
             
             System.out.println("Choose your action: ");
-            System.out.println("1. Use Soul Pierce (30-40 damage, 10 mana)");
-            System.out.println("2. Use Lifeblood Rend (35-45 damage, 20 mana)");
-            System.out.println("3. Use Demon Fang Strike (40-50 damage, 30 mana)");
+            System.out.println("1. Use " + character.skillOneName() + " (30-40 damage, 10 mana)");
+            System.out.println("2. Use " + character.skillTwoName() + " (35-45 damage, 20 mana)");
+            System.out.println("3. Use " + character.skillThreeName() + " (40-50 damage, 30 mana)");
             System.out.println("4. ONE HIT DELETE");
             System.out.print("Enter your choice: ");
             
@@ -77,7 +77,7 @@ public class storyOne {
                 if (character.getHealth() <= 0) {
                     System.out.println(character.getName() + " has fallen. " + objKappa.getName() + " prevails.");
                     break;
-                } else if (character.getHealth() <= 0) {
+                } else if (objKappa.getHealth() <= 0) {
                     System.out.println(character.getName() + " has defeated " + objKappa.getName() + "! Musashi Advances");
                     // Rewards logic can go here (e.g., coins)
                     break;
@@ -94,9 +94,9 @@ public class storyOne {
             System.out.println(objHyo.toString());
             
             System.out.println("Choose your action: ");
-            System.out.println("1. Use Soul Pierce (30-40 damage, 10 mana)");
-            System.out.println("2. Use Lifeblood Rend (35-45 damage, 20 mana)");
-            System.out.println("3. Use Demon Fang Strike (40-50 damage, 30 mana)");
+            System.out.println("1. Use " + character.skillOneName() + " (30-40 damage, 10 mana)");
+            System.out.println("2. Use " + character.skillTwoName() + " (35-45 damage, 20 mana)");
+            System.out.println("3. Use " + character.skillThreeName() + " (40-50 damage, 30 mana)");
             System.out.println("4. ONE HIT DELETE");
             System.out.print("Enter your choice: ");
             
@@ -176,9 +176,9 @@ public class storyOne {
             System.out.println(objKrev.toString());
 
             System.out.println("Choose your action:");
-            System.out.println("1. Use Soul Pierce (30-40 damage, 10 mana)");
-            System.out.println("2. Use Lifeblood Rend (35-45 damage, 20 mana)");
-            System.out.println("3. Use Demon Fang Strike (40-50 damage, 30 mana)");
+            System.out.println("1. Use " + character.skillOneName() + " (30-40 damage, 10 mana)");
+            System.out.println("2. Use " + character.skillTwoName() + " (35-45 damage, 20 mana)");
+            System.out.println("3. Use " + character.skillThreeName() + " (40-50 damage, 30 mana)");
             System.out.println("4. ONE HIT DELETE");
             System.out.print("Enter your choice: ");
 

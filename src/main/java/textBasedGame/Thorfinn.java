@@ -10,7 +10,9 @@ package textBasedGame;
  */
 import java.util.Scanner;
 public class Thorfinn extends Player {
-   
+    private String skillOneName = "Whirldwind Cleave";
+    private String skillTwoName = "Seismic Strike";
+    private String skillThreeName = "Blade Tempest";
     
     public Thorfinn(String Name, int Health, int Mana){
         super(Name, Health, Mana);
@@ -50,6 +52,21 @@ public class Thorfinn extends Player {
         System.out.println("Thorfinn uses One Hit Delete! Deals ∞ damage.");
         
         return 1000;
+    }
+    
+    @Override
+    public String skillOneName(){
+        return skillOneName;
+    }
+    
+    @Override 
+    public String skillTwoName(){
+        return skillTwoName;
+    }
+    
+    @Override
+    public String skillThreeName(){
+        return skillThreeName;
     }
     
     @Override
