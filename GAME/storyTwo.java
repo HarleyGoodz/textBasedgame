@@ -59,6 +59,7 @@ public class storyTwo {
             System.out.println("2. Use " + character.skillTwoName() + " (35-45 damage, 20 mana)");
             System.out.println("3. Use " + character.skillThreeName() + " (40-50 damage, 30 mana)");
             System.out.println("4. ONE HIT DELETE");
+            System.out.println("------------------------------------------");
             System.out.print("Enter your choice: ");
             
             try {
@@ -129,6 +130,7 @@ public class storyTwo {
             System.out.println("2. Use " + character.skillTwoName() + " (35-45 damage, 20 mana)");
             System.out.println("3. Use " + character.skillThreeName() + " (40-50 damage, 30 mana)");
             System.out.println("4. ONE HIT DELETE");
+            System.out.println("------------------------------------------");
             System.out.print("Enter your choice: ");
             
             try {
@@ -199,6 +201,7 @@ public class storyTwo {
             System.out.println("2. Use " + character.skillTwoName() + " (35-45 damage, 20 mana)");
             System.out.println("3. Use " + character.skillThreeName() + " (40-50 damage, 30 mana)");
             System.out.println("4. ONE HIT DELETE");
+            System.out.println("------------------------------------------");
             System.out.print("Enter your choice: ");
             
             try {
@@ -315,6 +318,7 @@ public class storyTwo {
             System.out.println("2. Use " + character.skillTwoName() + " (35-45 damage, 20 mana)");
             System.out.println("3. Use " + character.skillThreeName() + " (40-50 damage, 30 mana)");
             System.out.println("4. ONE HIT DELETE");
+            System.out.println("------------------------------------------");
             System.out.print("Enter your choice: ");
 
             try {

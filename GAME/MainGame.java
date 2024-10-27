@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package textBasedGame;
 
 /**
@@ -38,14 +35,22 @@ public class MainGame {
                     System.out.println("You have exited the game!");
                     return;  
                 } else {
+                    System.out.println("");
+                    System.out.println("---------------------------------------");
                     System.out.println("Please enter a valid choice!");
+                    System.out.println("");
                 }
             } catch (Exception e) {
+                System.out.println("");
+                System.out.println("---------------------------------------");
                 System.out.println("Invalid input! Please enter a number.");
+                System.out.println("");
                 scan.nextLine();
             }
         }    
+        Player playerCharacter = null;
         isEnabled = true;
+
         while(isEnabled){
             try{
                 System.out.println("Choose your character:");
@@ -55,43 +60,48 @@ public class MainGame {
         
                 System.out.print("Enter choice: ");
                 choice = scan.nextInt();
-                
-                isEnabled = false;
-            }catch(Exception e){
-                System.out.println("Invalid input! Please enter a number.");
-                scan.nextLine();
-            }
-        }
-        Player playerCharacter = null;
 
         switch (choice) {
             
             case 1:  
                 playerCharacter = new Musashi("Musashi Miyamoto", 100, 100);
                 playerCharacter.intro();
-                
+                isEnabled = false;
                 break;
             case 2:
                 playerCharacter = new Thorfinn("Thorfinn", 150, 100) {};
                 playerCharacter.intro();
-                
+                isEnabled = false;
                 break;
             case 3:
                 playerCharacter = new Gilgamesh("Gilgamesh", 100, 200);
                 playerCharacter.intro();
-                
+                isEnabled = false;
                 break;
             default:
+                System.out.println("");
+                System.out.println("------------------------------------------");
                 System.out.println("Invalid choice.");
-               
-                return;
+                System.out.println("");
         }
+    }catch(Exception e){
+            System.out.println("");
+            System.out.println("------------------------------------------");
+            System.out.println("Invalid input! Please enter a number.");
+            System.out.println("");
+            scan.nextLine();
+        }
+    }
+    
+        
         
         objWallOne.wallOne(playerCharacter);
         
         objWallTwo.wallTwo(playerCharacter);
         
         objWallThree.wallThree(playerCharacter);
+
+        playerCharacter.ending();
 
 
 
@@ -100,4 +110,5 @@ public class MainGame {
 
         System.out.println("------------------------THE END--------------------------");
     }
-}
+    //}
+    }
