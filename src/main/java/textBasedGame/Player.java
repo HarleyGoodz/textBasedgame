@@ -51,9 +51,17 @@ public abstract class Player {
         if(Health < 0)
             Health = 0;
     }
+    
+    public void setHeal(int heal){
+        Health += heal;
+    }
 
     public int getHealth(){
         return Health;
+    }
+    
+    public int getMana(){
+        return Mana;
     }
     
     public String getName(){
