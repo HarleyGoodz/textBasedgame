@@ -98,11 +98,11 @@ public class Gilgamesh extends Player{
     }
      
     @Override
-    public void epilogue(){
+    public void ending(){
          Scanner scanner = new Scanner(System.in);
-          System.out.println("-----------------------------------------------");
+          System.out.println("------------------GILGAMESH EPILOGUE-----------------------------");
         System.out.println(". After annihilating the demonic forces and standing as the savior of the world,\n"
-                + " Gilgamesh finds a mysterious ancient book given by the god of wisdom as his reward for saving the world. \n"
+                + " Gilgamesh has been gifted by Jormangandr, a mysterious ancient book given by the god of wisdom as his reward for saving the world. \n"
                 + "press 'Enter' to continue....");
         scanner.nextLine();
      
@@ -110,7 +110,7 @@ public class Gilgamesh extends Player{
      
      
      System.out.println("-----------------------------------------------");
-        System.out.println(".The cover of the book is made of an indestructible \n"
+        System.out.println("The cover of the book is made of an indestructible \n"
                 + "material, marked with celestial symbols and sigils of both light and shadow, indicating its power. \n"
                 + "press 'Enter' to continue....");
         scanner.nextLine();

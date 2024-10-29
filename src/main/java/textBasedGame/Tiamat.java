@@ -8,6 +8,7 @@ package textBasedGame;
  *
  * @author Silent Voice
  */
+import java.util.Scanner;
 public class Tiamat extends Enemy{
     private int Health;
     private String Name;
@@ -16,6 +17,8 @@ public class Tiamat extends Enemy{
         this.Name = Name;
         this.Health = Health;
     }
+
+    
     
     @Override
     public int skillOne(){
@@ -65,5 +68,82 @@ public class Tiamat extends Enemy{
      @Override
     public String toString(){
         return Name + "'s Health: " + Health;
+    }
+
+    public void Tiamat_Backstory(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("------------------BACKSTORY---------------------");
+        System.out.println("Tiamat, a primordial being of chaos and creation, born from the very essence of the cosmos.\n"+
+        "She existed in the abyss, a vast sea of raw,\n"+
+         "untamed power, where stars and worlds were yet to be formed.\n");
+         System.out.println("Press 'Enter' to continue");
+         scanner.nextLine();
+
+
+         System.out.println("--------------------------------------------------");
+        System.out.println("Tiamat's purpose was to give birth to life, but her creations were monstrous, \n"+
+        "chaotic beings born from her wrath and untethered energy.\n");
+         System.out.println("Press 'Enter' to continue");
+         scanner.nextLine();
+
+         System.out.println("--------------------------------------------------");
+        System.out.println("Your mission is to annihilate this being, to stop her hideous creations in conquering your world!\n");
+         System.out.println("Press 'Enter' to FIGHT");
+         scanner.nextLine();
+    }
+
+    public void Tiamat_Defeat(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("------------------TIAMAT HAS BEEN DEFEATED!---------------------");
+        System.out.println("The battle has been long and brutal. You are bruised and battered but still stands.\n");
+         System.out.println("Press 'Enter' to continue");
+         scanner.nextLine();
+
+         System.out.println("-----------------------------------------------------------------");
+        System.out.println("Then, Tiamat unleashes her final assault, an overwhelming surge of energy that threatens to consume all in its path.\n");
+         System.out.println("Press 'Enter' to continue");
+         scanner.nextLine();
+
+
+         System.out.println("-----------------------------------------------------------------");
+        System.out.println("You have been hit! The surge of raging pain is flowing through your veins.\n");
+         System.out.println("Press 'Enter' to continue");
+         scanner.nextLine();
+
+         System.out.println("-----------------------------------------------------------------");
+        System.out.println("Tiamat has fallen and so are you.\n");
+         System.out.println("Press 'Enter' to continue");
+         scanner.nextLine();
+
+         System.out.println("-----------------------------------------------------------------");
+        System.out.println(". . . *silence*...\n");
+         System.out.println("Press 'Enter' to continue");
+         scanner.nextLine();
+
+         System.out.println("-----------------------------------------------------------------");
+        System.out.println(". . . \n");
+         System.out.println("Press 'Enter' to open your eyes");
+         scanner.nextLine();
+
+         System.out.println("-----------------------------------------------------------------");
+        System.out.println("The bright red sky is no more, but you've noticed that you're at the forest where Jormangandr lives.\n");
+         System.out.println("Press 'Enter' to continue");
+         scanner.nextLine();
+
+         System.out.println("-----------------------------------------------------------------");
+        System.out.println("Turns out, after defeating the creator of creatures (Tiamat),\n"
+        + "Jormungandr took your body and healed you with its mystic power. \n");
+         System.out.println("Press 'Enter' to continue");
+         scanner.nextLine();
+
+         System.out.println("-----------------------------------------------------------------");
+        System.out.println("You are alone but victorious as the evil forces are no more. \n");
+         System.out.println("Press 'Enter' to continue");
+         scanner.nextLine();
+
+         System.out.println("-----------------------------------------------------------------");
+        System.out.println("You stood up and walk your path way home.\n");
+         System.out.println("Press 'Enter' to continue");
+         scanner.nextLine();
     }
 }

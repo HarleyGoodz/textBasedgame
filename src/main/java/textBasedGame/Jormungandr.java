@@ -57,38 +57,38 @@ public class Jormungandr extends Enemy{
         scanner.nextLine();
         
         System.out.println("-----------------------------------------------");
-        System.out.println("despising the humans who relentlessly trampled upon its beauty. It was not evil—it was a guardian, \n"
+        System.out.println("despising the humans who relentlessly trampled upon its beauty. It was not evil, it was a guardian, \n"
         + "a force of nature corrupted by the greed of mortals. "
                 + "\n press 'Enter' to continue....");
         scanner.nextLine();
    
         
         System.out.println("-----------------------------------------------");
-        System.out.println("Seeing the creature’s true intentions, you did not strike the final blow. Instead, \n"
+        System.out.println("Seeing the creature\'s true intentions, you did not strike the final blow. Instead, \n"
         + "you hurled a powerful healing potion toward the fallen serpent. \n"
                 + "press 'Enter' to continue");
         scanner.nextLine();
         
         System.out.println("-----------------------------------------------");
-        System.out.println("As the magic took hold, the serpent’s darkened scales began to shimmer. \n"
-                + "The player’s selfless act proved that not all of humanity \n"
+        System.out.println("As the magic took hold, the serpent's  darkened scales began to shimmer. \n"
+                + "The player's selfless act proved that not all of humanity \n"
                 + "was consumed by greed,that some still respected the balance of nature.\n"
                 + "press 'Enter' to continue");
         scanner.nextLine();
         
         System.out.println("-----------------------------------------------");
         System.out.println("The legendary serpent slithered forward, its massive form now a symbol of peace, not fear. \n"
-                + "\"You have restored my faith, human,\" the serpent’s voice rumbled like distant thunder. "
+                + "\"You have restored my faith, human,\" the serpent's voice rumbled like distant thunder. "
                 + "press 'Enter' to continue");
         scanner.nextLine();
         
         System.out.println("-----------------------------------------------");
-        System.out.println("\"Not all mortals are blind to the world’s true beauty. You have shown me that humanity still has hope.\""
+        System.out.println("\"Not all mortals are blind to the world's true beauty. You have shown me that humanity still has hope.\""
                 + "\npress 'Enter' to continue");
         scanner.nextLine();
         
         System.out.println("-----------------------------------------------");
-        System.out.println("With newfound trust, the serpent guided you through the twisted, never-ending forest.\n"
+        System.out.println("With newfound trust, the serpent guided you through the twisted, never ending forest.\n"
                 + " As they reached the edge of the cursed woods, the serpent turned one final time."
                 + "\npress 'Enter' to continue");
         scanner.nextLine();

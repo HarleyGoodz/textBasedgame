@@ -72,8 +72,8 @@ public class KrevMalak extends Enemy {
         
         Scanner scanner = new Scanner(System.in);
         System.out.println("----------------BACKSTORY-------------------------------");
-        System.out.println("Krev Malak, a god who is blinded by greed and an insatiable hunger for power. \n"
-                + "The more suffering he caused, the more powerful he became, feeding off the fear and hopelessness of his victims."
+        System.out.println("Krev Malak, a god blinded by greed and an insatiable hunger for power. \n"
+                + "The more suffering he caused, the more powerful he becomes, feeding off the fear and hopelessness of his victims."
                 + "\n press 'Enter to continue");
         scanner.nextLine();
         

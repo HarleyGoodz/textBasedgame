@@ -101,21 +101,26 @@ public class Musashi extends Player {
                 + "\n press 'Enter' to continue");
         scanner.nextLine();
     }
-    
-    
-    @Override
-    public void epilogue(){
-        
+
+    public void ending(){
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("-------------------MUSASHI ENDING----------------------------");
+        System.out.println("Finally, Musashi succeeded defeating all the demons, resulting in regaining his humanity."
+                + "\n press 'Enter' to continue");
+        scanner.nextLine();
+
+        System.out.println("-----------------------------------------------");
+        System.out.println("He lived in peace, no longer chained by the curse he has in the past."
+                + "\n press 'Enter' to continue");
+        scanner.nextLine();
+
+        System.out.println("-------------------MUSASHI ENDING----------------------------");
+        System.out.println("As he returned to his hometown, he lived happily ever after..."
+                + "\n press 'Enter' to end");
+        scanner.nextLine();
     }
     
-    
-
-
-    
-    
-    
-    
-
    
     
 }

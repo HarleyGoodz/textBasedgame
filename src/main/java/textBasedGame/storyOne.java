@@ -24,11 +24,14 @@ public class storyOne {
             System.out.println(character.toString());
             System.out.println(objKappa.toString());
             
+            System.out.println("---------------------------------------");
             System.out.println("Choose your action: ");
+            System.out.println("---------------------------------------");
             System.out.println("1. Use " + character.skillOneName() + " (30-40 damage, 10 mana)");
             System.out.println("2. Use " + character.skillTwoName() + " (35-45 damage, 20 mana)");
             System.out.println("3. Use " + character.skillThreeName() + " (40-50 damage, 30 mana)");
             System.out.println("4. ONE HIT DELETE");
+            System.out.println("------------------------------------------");
             System.out.print("Enter your choice: ");
             
             try {
@@ -78,7 +81,7 @@ public class storyOne {
                     System.out.println(character.getName() + " has fallen. " + objKappa.getName() + " prevails.");
                     break;
                 } else if (objKappa.getHealth() <= 0) {
-                    System.out.println(character.getName() + " has defeated " + objKappa.getName() + "! Musashi Advances");
+                    System.out.println(character.getName() + " has defeated " + objKappa.getName() + "\n\n");
                     // Rewards logic can go here (e.g., coins)
                     break;
                 }
@@ -93,11 +96,14 @@ public class storyOne {
             System.out.println(character.toString());
             System.out.println(objHyo.toString());
             
+            System.out.println("---------------------------------------");
             System.out.println("Choose your action: ");
+            System.out.println("---------------------------------------");
             System.out.println("1. Use " + character.skillOneName() + " (30-40 damage, 10 mana)");
             System.out.println("2. Use " + character.skillTwoName() + " (35-45 damage, 20 mana)");
             System.out.println("3. Use " + character.skillThreeName() + " (40-50 damage, 30 mana)");
             System.out.println("4. ONE HIT DELETE");
+            System.out.println("------------------------------------------");
             System.out.print("Enter your choice: ");
             
             try {
@@ -147,7 +153,7 @@ public class storyOne {
                     System.out.println(character.getName() + " has fallen. " + objHyo.getName() + " prevails.");
                     break;
                 } else if (objHyo.getHealth() <= 0) {
-                    System.out.println(character.getName() + " has defeated " + objHyo.getName() + "! Musashi Advances");
+                    System.out.println(character.getName() + " has defeated " + objHyo.getName() + "\n\n");
                     // Rewards logic can go here (e.g., coins)
                     break;
                 }
@@ -175,11 +181,15 @@ public class storyOne {
             System.out.println(character.toString());
             System.out.println(objKrev.toString());
 
+            System.out.println("---------------------------------------");
+
             System.out.println("Choose your action:");
+            System.out.println("---------------------------------------");
             System.out.println("1. Use " + character.skillOneName() + " (30-40 damage, 10 mana)");
             System.out.println("2. Use " + character.skillTwoName() + " (35-45 damage, 20 mana)");
             System.out.println("3. Use " + character.skillThreeName() + " (40-50 damage, 30 mana)");
             System.out.println("4. ONE HIT DELETE");
+            System.out.println("------------------------------------------");
             System.out.print("Enter your choice: ");
 
             try {
@@ -245,7 +255,7 @@ public class storyOne {
                     System.out.println(character.getName() + " has fallen. " + objKrev.getName() + " prevails.");
                     break;
                 } else if (objKrev.getHealth() <= 0) {
-                    System.out.println(character.getName() + " has defeated " + objKrev.getName() + "! He has earned his freedom.");
+                    System.out.println(character.getName() + " has defeated " + objKrev.getName() + "\n\n");
                     // Rewards logic can go here (e.g., coins)
                     break;
                 }

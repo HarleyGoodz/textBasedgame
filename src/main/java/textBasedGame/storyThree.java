@@ -16,18 +16,44 @@ public class storyThree {
     Humbaba objHum = new Humbaba("Humbaba", 200);
     
     
+    
     public void wallThree(Player character){
         Scanner scanner = new Scanner(System.in);
+
+    System.out.println("---------THE FINAL CHAPTER---------------");
+    System.out.println("You have arrived at the final wall... A hellish journey awaits you.");
+    System.out.println("Press 'Enter' to continue");
+    scanner.nextLine();
+
+
+    System.out.println("----------------------------------------------");
+    System.out.println("As you have exited the forest, a bright red sky welcomed you showing its immense power of darkness...");
+    System.out.println("Press 'Enter' to continue");
+    scanner.nextLine();
+
+    System.out.println("----------------------------------------------");
+    System.out.println("As you took a couple of steps in that world, An anzu landed before you, interfering your journey and intends to"+ 
+    " kill you....");
+    System.out.println("Press 'Enter' to continue");
+    scanner.nextLine();
+
+    System.out.println("----------------------------------------------");
+    System.out.println("Prepare for Battle!");
+    System.out.println("Press 'Enter' to continue");
+    scanner.nextLine();
         
         while (objAnzu.getHealth() > 0 && character.getHealth() > 0){
             System.out.println(character.toString());
             System.out.println(objAnzu.toString());
             
+            System.out.println("---------------------------------------");
             System.out.println("Choose your action: ");
+            System.out.println("---------------------------------------");
             System.out.println("1. Use " + character.skillOneName() + " (30-40 damage, 10 mana)");
             System.out.println("2. Use " + character.skillTwoName() + " (35-45 damage, 20 mana)");
             System.out.println("3. Use " + character.skillThreeName() + " (40-50 damage, 30 mana)");
             System.out.println("4. ONE HIT DELETE");
+            System.out.println("------------------------------------------");
             System.out.print("Enter your choice: ");
             
             try {
@@ -77,7 +103,7 @@ public class storyThree {
                     System.out.println(character.getName() + " has fallen. " + objAnzu.getName() + " prevails.");
                     break;
                 } else if (objAnzu.getHealth() <= 0) {
-                    System.out.println(character.getName() + " has defeated " + objAnzu.getName() + "! Musashi Advances");
+                    System.out.println(character.getName() + " has defeated " + objAnzu.getName() + "\n\n");
                     // Rewards logic can go here (e.g., coins)
                     break;
                 }
@@ -86,16 +112,36 @@ public class storyThree {
                 scanner.nextLine();  // Clear the buffer
             }
         }
+
+    System.out.println("--------------------VICTORY!--------------------------");
+    System.out.println("You have successfully defended yourself, but it's not over yet!");
+    System.out.println("Press 'Enter' to continue");
+    scanner.nextLine();
+
+    System.out.println("----------------------------------------------");
+    System.out.println("As two of the monsters charged infront of you, avenging their ally!");
+    System.out.println("Press 'Enter' to continue");
+    scanner.nextLine();
+
+    System.out.println("----------------------------------------------");
+    System.out.println("Brace yourself! PREPARE FOR BATTLE 2!");
+    System.out.println("Press 'Enter' to FIGHT");
+    scanner.nextLine();
+
+        
         
         while (objUrma.getHealth() > 0 && character.getHealth() > 0){
             System.out.println(character.toString());
             System.out.println(objUrma.toString());
             
+            System.out.println("---------------------------------------");
             System.out.println("Choose your action: ");
+            System.out.println("---------------------------------------");
             System.out.println("1. Use " + character.skillOneName() + " (30-40 damage, 10 mana)");
             System.out.println("2. Use " + character.skillTwoName() + " (35-45 damage, 20 mana)");
             System.out.println("3. Use " + character.skillThreeName() + " (40-50 damage, 30 mana)");
             System.out.println("4. ONE HIT DELETE");
+            System.out.println("------------------------------------------");
             System.out.print("Enter your choice: ");
             
             try {
@@ -145,7 +191,7 @@ public class storyThree {
                     System.out.println(character.getName() + " has fallen. " + objUrma.getName() + " prevails.");
                     break;
                 } else if (objUrma.getHealth() <= 0) {
-                    System.out.println(character.getName() + " has defeated " + objUrma.getName() + "! Musashi Advances");
+                    System.out.println(character.getName() + " has defeated " + objUrma.getName() + "\n\n");
                     // Rewards logic can go here (e.g., coins)
                     break;
                 }
@@ -159,11 +205,14 @@ public class storyThree {
             System.out.println(character.toString());
             System.out.println(objHum.toString());
             
+            System.out.println("---------------------------------------");
             System.out.println("Choose your action: ");
+            System.out.println("---------------------------------------");
             System.out.println("1. Use " + character.skillOneName() + " (30-40 damage, 10 mana)");
             System.out.println("2. Use " + character.skillTwoName() + " (35-45 damage, 20 mana)");
             System.out.println("3. Use " + character.skillThreeName() + " (40-50 damage, 30 mana)");
             System.out.println("4. ONE HIT DELETE");
+            System.out.println("------------------------------------------");
             System.out.print("Enter your choice: ");
             
             try {
@@ -213,7 +262,7 @@ public class storyThree {
                     System.out.println(character.getName() + " has fallen. " + objHum.getName() + " prevails.");
                     break;
                 } else if (objHum.getHealth() <= 0) {
-                    System.out.println(character.getName() + " has defeated " + objHum.getName() + "! Musashi Advances");
+                    System.out.println(character.getName() + " has defeated " + objHum.getName() + "\n\n");
                     // Rewards logic can go here (e.g., coins)
                     break;
                 }
@@ -222,16 +271,33 @@ public class storyThree {
                 scanner.nextLine();  // Clear the buffer
             }
         }
+
+        System.out.println("----------------------------------------------");
+    System.out.println("After defeating those who attempted to trample your path, you managed to prevail on your adventure,\n"+
+     "you travel accross the great mountains, seeking to defeat the 3 headed dragon...");
+    System.out.println("Press 'Enter' to continue");
+    scanner.nextLine();
+
+    System.out.println("----------------------------------------------");
+    System.out.println("After climbing the top of the mountain, the three headed dragon roars showcasing its greatness and power.");
+    System.out.println("Press 'Enter' to continue");
+    scanner.nextLine();
+
+    objTia.Tiamat_Backstory();
+
         
          while (objTia.getHealth() > 0 && character.getHealth() > 0) {
             System.out.println(character.toString());
             System.out.println(objTia.toString());
 
+            System.out.println("---------------------------------------");
             System.out.println("Choose your action:");
+            System.out.println("---------------------------------------");
             System.out.println("1. Use " + character.skillOneName() + " (30-40 damage, 10 mana)");
             System.out.println("2. Use " + character.skillTwoName() + " (35-45 damage, 20 mana)");
             System.out.println("3. Use " + character.skillThreeName() + " (40-50 damage, 30 mana)");
             System.out.println("4. ONE HIT DELETE");
+            System.out.println("------------------------------------------");
             System.out.print("Enter your choice: ");
 
             try {
@@ -295,7 +361,7 @@ public class storyThree {
                     System.out.println(character.getName() + " has fallen. " + objTia.getName() + " prevails.");
                     break;
                 } else if (objTia.getHealth() <= 0) {
-                    System.out.println(character.getName() + " has defeated " + objTia.getName() + "! He has earned his freedom.");
+                    System.out.println(character.getName() + " has defeated " + objTia.getName() + "\n\n");
                     // Rewards logic can go here (e.g., coins)
                     break;
                 }
@@ -304,6 +370,8 @@ public class storyThree {
                 scanner.nextLine();  // Clear the buffer
             }
         }
+
+        objTia.Tiamat_Defeat();
         
     }
 }

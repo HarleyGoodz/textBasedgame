@@ -9,7 +9,7 @@ package textBasedGame;
  * @author Silent Voice
  */
 import java.util.Scanner;
-public class Thorfinn extends Player {
+public abstract class Thorfinn extends Player {
     private String skillOneName = "Whirldwind Cleave";
     private String skillTwoName = "Seismic Strike";
     private String skillThreeName = "Blade Tempest";
@@ -75,91 +75,69 @@ public class Thorfinn extends Player {
         
         System.out.println("------------------BACKSTORY-----------------------------");
         System.out.println("Thorn was once a man of peace, a master of the sword who valued family above all else.\n"
-                + " His world shattered when his father's most trusted ally betrayed them, \n "
+                + " His world shattered when his family was attacked by the monstrious creations of Tiamat, \n "
                 + "press 'Enter' to continue....");
         scanner.nextLine();
   
-        System.out.println("-------------------------------------------------");
+       
         
         System.out.println("-----------------------------------------------");
         System.out.println("Consumed by rage, Thorn has spent years honing his skills, \n"
                 + "turning himself into a walking weapon of vengeance. \n"
                 + "press 'Enter' to continue....");
         scanner.nextLine();
-        System.out.println("-------------------------------------------------");
+        
         
         System.out.println("-----------------------------------------------");
-        System.out.println("His only goal is to find and kill the betrayer who took everything from him,"
+        System.out.println("His only goal is to kill all the monsters who took everything from him,"
                 + "and ending those spread evil.\n"
-                + "But Thorn’s journey will lead him to realize that his rage, \n"
+                + "But Thorn's journey will lead him to realize that his rage, \n"
                 + "while powerful, is not the only thing that can forge his destiny.\n"
                 + "press 'Enter' to continue....");
         scanner.nextLine();
-        System.out.println("-------------------------------------------------");
+       
         
     }
 
-    @Override
-    public void epilogue(){
+ 
+    public void ending(){
         
         Scanner scanner = new Scanner(System.in);
-        System.out.println("-----------------------------------------------");
-        System.out.println("As Thorfinn stands over the fallen body of his father’s betrayer, \n"
-                + "sword dripping with blood, the moment he had envisioned for years finally arrives.\n"
-                + "the once-powerful enemy, now a broken, gasping figure, lies at Thorn’s feet. "
+        System.out.println("------------------THORFINN EPILOGUE-----------------------------");
+        System.out.println("As Thorfinn stands over his victory in avenging his family, \n"
+                + "the moment he had envisioned for years finally arrives.\n"
+                + "the once-powerful Tiamat, now a broken, gasping figure, eradicated from reality by Thorfinn's hands. "
                 + "\n press 'Enter' to continue....");
         scanner.nextLine();
-        System.out.println("-------------------------------------------------");
-        
-        System.out.println("-----------------------------------------------");
-        System.out.println("His chest heaves as he struggles to speak, but Thorn feels no pity,\n"
-                + "only the cold satisfaction of vengeance fulfilled.\n press 'Enter' to continue....");
-        scanner.nextLine();
-        System.out.println("-------------------------------------------------");
-        
-        System.out.println("-----------------------------------------------");
-        System.out.println("Is this what you wanted? the betrayer asks, his voice weak,\n"
-                + " but cutting through the silence. After all these years... is your soul at peace?"
-                + "\n press 'Enter' to continue....");
-        scanner.nextLine();
-        System.out.println("-------------------------------------------------");
+      
         
         
         System.out.println("-----------------------------------------------");
-        System.out.println("Thorfinn stares down, gripping his sword tightly. The rush of triumph he had anticipated feels hollow.\n"
-                + "The rage that fueled him for so long begins to wane, leaving him with a strange emptiness.\n"
+        System.out.println("The rage that fueled him for so long begins to wane, leaving him with a strange emptiness.\n"
                 + "press 'Enter' to continue....");
         scanner.nextLine();
-        System.out.println("-------------------------------------------------");
+      
+       
         
         System.out.println("-----------------------------------------------");
-        System.out.println("The betrayer coughs, a bitter smile curling his lips. \n"
-                + "I didn’t just take your family, Thorn. I took your peace. I made you into what you are now.\n"
-                + "\n press 'Enter' to continue....");
-        scanner.nextLine();
-        System.out.println("-------------------------------------------------");
-        
-        System.out.println("-----------------------------------------------");
-        System.out.println("The words hit Thorn harder than any blade ever could. He had become a weapon, yes, \n"
-                + "but now, standing victorious, he realizes the cost. He had lost more than just his family. He had lost himself.\n"
+        System.out.println("standing victorious, he realizes the cost. He had lost more than just his family. He had lost himself.\n"
                 + " press 'Enter' to continue");
         scanner.nextLine();
-        System.out.println("-------------------------------------------------");
+    
         
         System.out.println("-----------------------------------------------");
-        System.out.println("With a grimace, Thorn drives his sword into the earth beside the betrayer, no longer needing it. \n"
-                + "I came here to kill you, to end this"
-                + " Thorfinn says, his voice low but steady. But now I see that killing you isn’t the end of my journey.\n"
+        System.out.println("With a grimace, Thorn drives his sword into the earth, no longer needing it. \n"
+                + " Thorfinn says, his voice low but steady. this isn't the end of my journey.\n"
                 + "press 'Enter' to continue");
         scanner.nextLine();
-        System.out.println("-------------------------------------------------");
+  
         
         System.out.println("-----------------------------------------------");
-        System.out.println("As Thorn walks away from the battlefield, the wind carries the scent of blood and ash,\n"
+        System.out.println("As Thorn walks away from the forest, the wind carries the scent of sweat and bruises,\n"
                 + " but something deeper stirs within him. He knows now that his journey is not over.\n"
                 + "press 'Enter' to continue");
         scanner.nextLine();
-        System.out.println("-------------------------------------------------");
+        
         
         System.out.println("-----------------------------------------------");
         System.out.println("He looks to the horizon, where the sun is just beginning to rise. A new dawn, a new chapter.\n"
@@ -167,7 +145,7 @@ public class Thorfinn extends Player {
                 + " he realizes, will be forged not by the blood he sheds, but by the choices he makes from here on."
                 + "\npress 'Enter' to end the journey....");
         scanner.nextLine();
-        System.out.println("-------------------------------------------------");
+   
         
         
         
@@ -177,7 +155,6 @@ public class Thorfinn extends Player {
         
         
     }
-    
     
 }
 

@@ -28,7 +28,7 @@ public abstract class Player {
     
     public abstract void intro();
     
-    public abstract void epilogue();
+    public abstract void ending();
     
     public abstract String skillOneName();
     public abstract String skillTwoName();
