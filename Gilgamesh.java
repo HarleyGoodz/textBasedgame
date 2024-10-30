@@ -51,6 +51,8 @@ public class Gilgamesh extends Player{
     public int oneHitDelete(){
         
         System.out.println("Gilgamesh uses ONE HIT DELETE! Deals ∞ damage.");
+        System.out.println("");
+        System.out.println("");
         
         return 1000;
     }

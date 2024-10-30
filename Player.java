@@ -25,10 +25,12 @@ public abstract class Player {
     public abstract int skillTwo();
     public abstract int skillThree();
     public abstract int oneHitDelete();
+
+    public boolean defeated = false;
     
     public abstract void intro();
     
-    public abstract void epilogue();
+    public abstract void ending();
     
     public abstract String skillOneName();
     public abstract String skillTwoName();

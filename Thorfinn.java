@@ -50,6 +50,8 @@ public abstract class Thorfinn extends Player {
     public int oneHitDelete(){
         
         System.out.println("Thorfinn uses One Hit Delete! Deals ∞ damage.");
+        System.out.println("");
+        System.out.println("");
         
         return 1000;
     }
