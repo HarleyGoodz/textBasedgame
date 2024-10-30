@@ -12,6 +12,8 @@ public class MainGame {
         storyOne objWallOne = new storyOne();
         storyTwo objWallTwo = new storyTwo();
         storyThree objWallThree = new storyThree();
+        Inventory objIn = new Inventory();
+        openShop objShop = new openShop(objIn);
         
         int choice = 0;
         
@@ -95,11 +97,11 @@ public class MainGame {
     
         
         
-        objWallOne.wallOne(playerCharacter);
+        objWallOne.wallOne(playerCharacter, objIn);
         
-        objWallTwo.wallTwo(playerCharacter);
+        objWallTwo.wallTwo(playerCharacter, objIn);
         
-        objWallThree.wallThree(playerCharacter);
+        objWallThree.wallThree(playerCharacter, objIn);
 
         playerCharacter.ending();
 

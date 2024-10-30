@@ -13,12 +13,16 @@ public abstract class Player {
     private String Name;
     private int Health;
     private int Mana;
+    private int MaxHealth;
+    private int MaxMana;
     //private int Coins;
     
-    public Player(String Name, int Health, int Mana){
+    public Player(String Name, int MaxHealth, int MaxMana){
         this.Name = Name;
-        this.Health = Health;
-        this.Mana = Mana;
+        this.MaxHealth = MaxHealth;
+        this.Health = MaxHealth;
+        this.MaxMana = MaxMana;
+        this.Mana = MaxMana;
     }
     
     public abstract int skillOne();
@@ -54,6 +58,18 @@ public abstract class Player {
     
     public void setHeal(int heal){
         Health += heal;
+        
+        if(Health > MaxHealth){
+            Health = MaxHealth;
+        }
+    }
+    
+    public void setMana(int manaRegen){
+        Mana += manaRegen;
+        
+        if(Mana > MaxMana){
+            Mana = MaxMana;
+        }
     }
 
     public int getHealth(){

@@ -17,9 +17,9 @@ public class storyThree {
     
     
     
-    public void wallThree(Player character){
-        Scanner scanner = new Scanner(System.in);
-
+    public void wallThree(Player character, Inventory objIn){
+    Scanner scanner = new Scanner(System.in);
+    openShop objShop = new openShop(objIn);
     System.out.println("---------THE FINAL CHAPTER---------------");
     System.out.println("You have arrived at the final wall... A hellish journey awaits you.");
     System.out.println("Press 'Enter' to continue");
@@ -53,6 +53,8 @@ public class storyThree {
             System.out.println("2. Use " + character.skillTwoName() + " (35-45 damage, 20 mana)");
             System.out.println("3. Use " + character.skillThreeName() + " (40-50 damage, 30 mana)");
             System.out.println("4. ONE HIT DELETE");
+            System.out.println("5. Healing Potion (" + objIn.getItemOneCount() + ")");
+            System.out.println("6. Mana Potion (" + objIn.getItemTwoCount() + ")");
             System.out.println("------------------------------------------");
             System.out.print("Enter your choice: ");
             
@@ -61,6 +63,8 @@ public class storyThree {
                 scanner.nextLine();  // Consume newline
 
                 int damage = 0;
+                int heal = 0;
+                int mana = 0;
                 switch (skillChoice) {
                     case 1:
                         if (character.useMana(10)) {
@@ -84,6 +88,40 @@ public class storyThree {
                         damage = character.oneHitDelete();
                         objAnzu.takeDamage(damage);
                         break;
+                    case 5:
+                        if(objIn.getItemOneCount() > 0){
+                            if(character.getHealth() == 100){
+                                System.out.println("You're still full in Health! ");
+                                continue;
+                            }
+                            else{
+                                System.out.println("Added +50 to " + character.getName() + "'s Health!");
+                                heal = objIn.useItemOne();
+                                character.setHeal(heal);
+                                continue;
+                            }
+                        }
+                        else{
+                            System.out.println("You're out of Health Potions!");
+                            continue;
+                        }
+                    case 6:
+                        if(objIn.getItemTwoCount() > 0){
+                            if(character.getMana() == 100){
+                                System.out.println("You're still full in Mana!");
+                                continue;
+                            }
+                            else{
+                                System.out.println("Added +50 to " + character.getName() + "'s Mana!");
+                                mana = objIn.useItemTwo();
+                                character.setMana(mana);
+                                continue;
+                            }
+                        }
+                        else{
+                            System.out.println("You're out of Mana Potions!");
+                            continue;
+                        }
                     default:
                         System.out.println("Not enough mana or invalid choice! Choose again.");
                         continue;
@@ -104,6 +142,8 @@ public class storyThree {
                     break;
                 } else if (objAnzu.getHealth() <= 0) {
                     System.out.println(character.getName() + " has defeated " + objAnzu.getName() + "\n\n");
+                    objIn.setGold((int) (Math.random() * (50 - 25 + 1)) + 25);
+                    System.out.println(character.getName() + " has earned " + objIn.getGold() + " gold!");
                     // Rewards logic can go here (e.g., coins)
                     break;
                 }
@@ -141,6 +181,8 @@ public class storyThree {
             System.out.println("2. Use " + character.skillTwoName() + " (35-45 damage, 20 mana)");
             System.out.println("3. Use " + character.skillThreeName() + " (40-50 damage, 30 mana)");
             System.out.println("4. ONE HIT DELETE");
+            System.out.println("5. Healing Potion (" + objIn.getItemOneCount() + ")");
+            System.out.println("6. Mana Potion (" + objIn.getItemTwoCount() + ")");
             System.out.println("------------------------------------------");
             System.out.print("Enter your choice: ");
             
@@ -149,6 +191,8 @@ public class storyThree {
                 scanner.nextLine();  // Consume newline
 
                 int damage = 0;
+                int heal = 0;
+                int mana = 0;
                 switch (skillChoice) {
                     case 1:
                         if (character.useMana(10)) {
@@ -172,6 +216,40 @@ public class storyThree {
                         damage = character.oneHitDelete();
                         objUrma.takeDamage(damage);
                         break;
+                    case 5:
+                        if(objIn.getItemOneCount() > 0){
+                            if(character.getHealth() == 100){
+                                System.out.println("You're still full in Health! ");
+                                continue;
+                            }
+                            else{
+                                System.out.println("Added +50 to " + character.getName() + "'s Health!");
+                                heal = objIn.useItemOne();
+                                character.setHeal(heal);
+                                continue;
+                            }
+                        }
+                        else{
+                            System.out.println("You're out of Health Potions!");
+                            continue;
+                        }
+                    case 6:
+                        if(objIn.getItemTwoCount() > 0){
+                            if(character.getMana() == 100){
+                                System.out.println("You're still full in Mana!");
+                                continue;
+                            }
+                            else{
+                                System.out.println("Added +50 to " + character.getName() + "'s Mana!");
+                                mana = objIn.useItemTwo();
+                                character.setMana(mana);
+                                continue;
+                            }
+                        }
+                        else{
+                            System.out.println("You're out of Mana Potions!");
+                            continue;
+                        }
                     default:
                         System.out.println("Not enough mana or invalid choice! Choose again.");
                         continue;
@@ -192,6 +270,8 @@ public class storyThree {
                     break;
                 } else if (objUrma.getHealth() <= 0) {
                     System.out.println(character.getName() + " has defeated " + objUrma.getName() + "\n\n");
+                    objIn.setGold((int) (Math.random() * (50 - 25 + 1)) + 25);
+                    System.out.println(character.getName() + " has earned " + objIn.getGold() + " gold!");
                     // Rewards logic can go here (e.g., coins)
                     break;
                 }
@@ -212,6 +292,8 @@ public class storyThree {
             System.out.println("2. Use " + character.skillTwoName() + " (35-45 damage, 20 mana)");
             System.out.println("3. Use " + character.skillThreeName() + " (40-50 damage, 30 mana)");
             System.out.println("4. ONE HIT DELETE");
+            System.out.println("5. Healing Potion (" + objIn.getItemOneCount() + ")");
+            System.out.println("6. Mana Potion (" + objIn.getItemTwoCount() + ")");
             System.out.println("------------------------------------------");
             System.out.print("Enter your choice: ");
             
@@ -220,6 +302,8 @@ public class storyThree {
                 scanner.nextLine();  // Consume newline
 
                 int damage = 0;
+                int heal = 0;
+                int mana = 0;
                 switch (skillChoice) {
                     case 1:
                         if (character.useMana(10)) {
@@ -243,6 +327,40 @@ public class storyThree {
                         damage = character.oneHitDelete();
                         objHum.takeDamage(damage);
                         break;
+                    case 5:
+                        if(objIn.getItemOneCount() > 0){
+                            if(character.getHealth() == 100){
+                                System.out.println("You're still full in Health! ");
+                                continue;
+                            }
+                            else{
+                                System.out.println("Added +50 to " + character.getName() + "'s Health!");
+                                heal = objIn.useItemOne();
+                                character.setHeal(heal);
+                                continue;
+                            }
+                        }
+                        else{
+                            System.out.println("You're out of Health Potions!");
+                            continue;
+                        }
+                    case 6:
+                        if(objIn.getItemTwoCount() > 0){
+                            if(character.getMana() == 100){
+                                System.out.println("You're still full in Mana!");
+                                continue;
+                            }
+                            else{
+                                System.out.println("Added +50 to " + character.getName() + "'s Mana!");
+                                mana = objIn.useItemTwo();
+                                character.setMana(mana);
+                                continue;
+                            }
+                        }
+                        else{
+                            System.out.println("You're out of Mana Potions!");
+                            continue;
+                        }
                     default:
                         System.out.println("Not enough mana or invalid choice! Choose again.");
                         continue;
@@ -263,6 +381,8 @@ public class storyThree {
                     break;
                 } else if (objHum.getHealth() <= 0) {
                     System.out.println(character.getName() + " has defeated " + objHum.getName() + "\n\n");
+                    objIn.setGold((int) (Math.random() * (50 - 25 + 1)) + 25);
+                    System.out.println(character.getName() + " has earned " + objIn.getGold() + " gold!");
                     // Rewards logic can go here (e.g., coins)
                     break;
                 }
@@ -297,6 +417,8 @@ public class storyThree {
             System.out.println("2. Use " + character.skillTwoName() + " (35-45 damage, 20 mana)");
             System.out.println("3. Use " + character.skillThreeName() + " (40-50 damage, 30 mana)");
             System.out.println("4. ONE HIT DELETE");
+            System.out.println("5. Healing Potion (" + objIn.getItemOneCount() + ")");
+            System.out.println("6. Mana Potion (" + objIn.getItemTwoCount() + ")");
             System.out.println("------------------------------------------");
             System.out.print("Enter your choice: ");
 
@@ -305,6 +427,8 @@ public class storyThree {
                 scanner.nextLine();  // Consume newline
 
                 int damage = 0;
+                int heal = 0;
+                int mana = 0;
                 switch (skillChoice) {
                     case 1:
                         if (character.useMana(10)) {
@@ -328,6 +452,40 @@ public class storyThree {
                         damage = character.oneHitDelete();
                         objTia.takeDamage(damage);
                         break;
+                    case 5:
+                        if(objIn.getItemOneCount() > 0){
+                            if(character.getHealth() == 100){
+                                System.out.println("You're still full in Health! ");
+                                continue;
+                            }
+                            else{
+                                System.out.println("Added +50 to " + character.getName() + "'s Health!");
+                                heal = objIn.useItemOne();
+                                character.setHeal(heal);
+                                continue;
+                            }
+                        }
+                        else{
+                            System.out.println("You're out of Health Potions!");
+                            continue;
+                        }
+                    case 6:
+                        if(objIn.getItemTwoCount() > 0){
+                            if(character.getMana() == 100){
+                                System.out.println("You're still full in Mana!");
+                                continue;
+                            }
+                            else{
+                                System.out.println("Added +50 to " + character.getName() + "'s Mana!");
+                                mana = objIn.useItemTwo();
+                                character.setMana(mana);
+                                continue;
+                            }
+                        }
+                        else{
+                            System.out.println("You're out of Mana Potions!");
+                            continue;
+                        }
                     default:
                         System.out.println("Not enough mana or invalid choice! Choose again.");
                         continue;
@@ -362,6 +520,9 @@ public class storyThree {
                     break;
                 } else if (objTia.getHealth() <= 0) {
                     System.out.println(character.getName() + " has defeated " + objTia.getName() + "\n\n");
+                    objIn.setGold((int) (Math.random() * (250 - 100 + 1)) + 100);
+                    System.out.println(character.getName() + " has earned " + objIn.getGold() + " gold!");
+                    objTia.Tiamat_Defeat();
                     // Rewards logic can go here (e.g., coins)
                     break;
                 }
@@ -370,8 +531,6 @@ public class storyThree {
                 scanner.nextLine();  // Clear the buffer
             }
         }
-
-        objTia.Tiamat_Defeat();
         
     }
 }

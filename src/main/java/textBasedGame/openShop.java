@@ -10,7 +10,14 @@ package textBasedGame;
  */
 import java.util.Scanner;
 public class openShop {
-    public void Shop(Scanner scanner, Inventory objIn) {
+    Inventory objIn;
+    
+    public openShop(Inventory objIn){
+        this.objIn = objIn;
+    }
+    
+   
+    public void Shop(Scanner scanner) {
         System.out.println("-------------------------------------------");
         System.out.println("After a fierce battle, you are now taking a break in the shop.");
         System.out.println("-------------------------------------------");
@@ -28,15 +35,18 @@ public class openShop {
                     objIn.useGold(100);
                     System.out.println("You bought a Healing Potion!");
                     objIn.IncItemOneCount();
+                    System.out.println("Gold Remaining: " + objIn.getGold());
                 } else if (itemChoice == 2 && objIn.getGold() >= 100) {
                     objIn.useGold(100);
                     System.out.println("You bought a Mana Potion!");
                     objIn.IncItemTwoCount();
+                    System.out.println("Gold Remaining: " + objIn.getGold());
                 } else if (itemChoice == 0) {
                     System.out.println("You have exited the shop.");
                     break;  
                 } else {
                     System.out.println("Invalid choice or not enough coins! Try again.");
+                    System.out.println("Gold Remaining: " + objIn.getGold());
                 }
             } catch (Exception e) {
                 System.out.println("Invalid input! Please enter a valid number.");
