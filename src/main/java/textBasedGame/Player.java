@@ -15,7 +15,7 @@ public abstract class Player {
     private int Mana;
     private int MaxHealth;
     private int MaxMana;
-    //private int Coins;
+    public boolean Defeated = false;
     
     public Player(String Name, int MaxHealth, int MaxMana){
         this.Name = Name;
@@ -70,6 +70,14 @@ public abstract class Player {
         if(Mana > MaxMana){
             Mana = MaxMana;
         }
+    }
+    
+    public void setDefeated(boolean Defeated){
+        this.Defeated = Defeated;
+    }
+    
+    public boolean getDefeated(){
+        return Defeated;
     }
 
     public int getHealth(){
