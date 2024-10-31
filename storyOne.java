@@ -7,11 +7,10 @@ public class storyOne {
     Kappa objKappa = new Kappa("Kappa", 100);
     Hyosube objHyo = new Hyosube("Hyosube", 100);
     Scanner scanner = new Scanner(System.in);
-    
-    
-    
-    
 
+    int turn_count = 0;
+    
+    
     public void wallOne(Player character){
         Scanner scanner = new Scanner(System.in);
         
@@ -31,35 +30,63 @@ public class storyOne {
             System.out.println("2. Use " + character.skillTwoName() + " (35-45 damage, 20 mana)");
             System.out.println("3. Use " + character.skillThreeName() + " (40-50 damage, 30 mana)");
             System.out.println("4. ONE HIT DELETE");
+            System.out.println("------------------------------------------");
             System.out.print("Enter your choice: ");
             
             try {
                 int skillChoice = scanner.nextInt();
-                scanner.nextLine();  // Consume newline
+                scanner.nextLine(); 
 
                 int damage = 0;
                 switch (skillChoice) {
                     case 1:
+                    turn_count++;
+                    System.out.println("------------------------------");
+                    System.out.println("");
+                    System.out.println("Turn count: "+turn_count);
+                    System.out.println("");
+                    
                         if (character.useMana(10)) {
                             damage = character.skillOne(); // Random damage between 30 and 40
                             objKappa.takeDamage(damage);
+                            
                         }
                         break;
                     case 2:
+                    turn_count++;
+                    System.out.println("------------------------------");
+                    System.out.println("");
+                    System.out.println("Turn count: "+turn_count);
+                    System.out.println("");
+
                         if (character.useMana(20)) {
                             damage = character.skillTwo(); // Random damage between 35 and 45
                             objKappa.takeDamage(damage);
+                            
                         }
                         break;
                     case 3:
+                    turn_count++;
+                    System.out.println("------------------------------");
+                    System.out.println("");
+                    System.out.println("Turn count: "+turn_count);
+                    System.out.println("");
+                    
                         if (character.useMana(30)) {
                             damage = character.skillThree();// Random damage between 40 and 50
                             objKappa.takeDamage(damage);
+                            
                         }
                         break;
                     case 4:
+                    turn_count++;
+                    System.out.println("------------------------------");
+                    System.out.println("");
+                    System.out.println("Turn count: "+turn_count);
+                    System.out.println("");
                         damage = character.oneHitDelete();
                         objKappa.takeDamage(damage);
+                        
                         break;
                     default:
                         System.out.println("Not enough mana or invalid choice! Choose again.");
@@ -78,9 +105,11 @@ public class storyOne {
                 // Check if either has fallen
                 if (character.getHealth() <= 0) {
                     System.out.println(character.getName() + " has fallen. " + objKappa.getName() + " prevails.");
+                    turn_count = 0;
                     break;
                 } else if (objKappa.getHealth() <= 0) {
                     System.out.println(character.getName() + " has defeated " + objKappa.getName() + "\n\n");
+                    turn_count = 0;
                     // Rewards logic can go here (e.g., coins)
                     break;
                 }
@@ -102,6 +131,7 @@ public class storyOne {
             System.out.println("2. Use " + character.skillTwoName() + " (35-45 damage, 20 mana)");
             System.out.println("3. Use " + character.skillThreeName() + " (40-50 damage, 30 mana)");
             System.out.println("4. ONE HIT DELETE");
+            System.out.println("------------------------------------------");
             System.out.print("Enter your choice: ");
             
             try {
@@ -111,24 +141,48 @@ public class storyOne {
                 int damage = 0;
                 switch (skillChoice) {
                     case 1:
+                    turn_count++;
+                    System.out.println("------------------------------");
+                    System.out.println("");
+                    System.out.println("Turn count: "+turn_count);
+                    System.out.println("");
+
                         if (character.useMana(10)) {
                             damage = character.skillOne(); // Random damage between 30 and 40
                             objHyo.takeDamage(damage);
                         }
                         break;
                     case 2:
+                    turn_count++;
+                    System.out.println("------------------------------");
+                    System.out.println("");
+                    System.out.println("Turn count: "+turn_count);
+                    System.out.println("");
+
                         if (character.useMana(20)) {
                             damage = character.skillTwo(); // Random damage between 35 and 45
                             objHyo.takeDamage(damage);
                         }
                         break;
                     case 3:
+                    turn_count++;
+                    System.out.println("------------------------------");
+                    System.out.println("");
+                    System.out.println("Turn count: "+turn_count);
+                    System.out.println("");
+
                         if (character.useMana(30)) {
                             damage = character.skillThree();// Random damage between 40 and 50
                             objHyo.takeDamage(damage);
                         }
                         break;
                     case 4:
+                    turn_count++;
+                    System.out.println("------------------------------");
+                    System.out.println("");
+                    System.out.println("Turn count: "+turn_count);
+                    System.out.println("");
+
                         damage = character.oneHitDelete();
                         objHyo.takeDamage(damage);
                         break;
@@ -149,9 +203,11 @@ public class storyOne {
                 // Check if either has fallen
                 if (character.getHealth() <= 0) {
                     System.out.println(character.getName() + " has fallen. " + objHyo.getName() + " prevails.");
+                    turn_count = 0;
                     break;
                 } else if (objHyo.getHealth() <= 0) {
                     System.out.println(character.getName() + " has defeated " + objHyo.getName() + "\n\n");
+                    turn_count = 0;
                     // Rewards logic can go here (e.g., coins)
                     break;
                 }
@@ -160,7 +216,8 @@ public class storyOne {
                 scanner.nextLine();  // Clear the buffer
             }
         }
-        
+
+
         System.out.println("------------------------------------------");
         System.out.println("After killing the 2 demons that blocked your path... \n"
                 + "you continued at your journey, smelling the scent of a godly power...."
@@ -187,6 +244,7 @@ public class storyOne {
             System.out.println("2. Use " + character.skillTwoName() + " (35-45 damage, 20 mana)");
             System.out.println("3. Use " + character.skillThreeName() + " (40-50 damage, 30 mana)");
             System.out.println("4. ONE HIT DELETE");
+            System.out.println("------------------------------------------");
             System.out.print("Enter your choice: ");
 
             try {
@@ -196,24 +254,48 @@ public class storyOne {
                 int damage = 0;
                 switch (skillChoice) {
                     case 1:
+                    turn_count++;
+                    System.out.println("------------------------------");
+                    System.out.println("");
+                    System.out.println("Turn count: "+turn_count);
+                    System.out.println("");
+
                         if (character.useMana(10)) {
                             damage = character.skillOne(); // Random damage between 30 and 40
                             objKrev.takeDamage(damage);
                         }
                         break;
                     case 2:
+                    turn_count++;
+                    System.out.println("------------------------------");
+                    System.out.println("");
+                    System.out.println("Turn count: "+turn_count);
+                    System.out.println("");
+
                         if (character.useMana(20)) {
                             damage = character.skillTwo(); // Random damage between 35 and 45
                             objKrev.takeDamage(damage);
                         }
                         break;
                     case 3:
+                    turn_count++;
+                    System.out.println("------------------------------");
+                    System.out.println("");
+                    System.out.println("Turn count: "+turn_count);
+                    System.out.println("");
+
                         if (character.useMana(30)) {
                             damage = character.skillThree();// Random damage between 40 and 50
                             objKrev.takeDamage(damage);
                         }
                         break;
                     case 4:
+                    turn_count++;
+                    System.out.println("------------------------------");
+                    System.out.println("");
+                    System.out.println("Turn count: "+turn_count);
+                    System.out.println("");
+
                         damage = character.oneHitDelete();
                         objKrev.takeDamage(damage);
                         break;
@@ -228,14 +310,18 @@ public class storyOne {
                     int randomPick = (int) (Math.random() * (3 - 1 + 1)) + 1;
                     switch(randomPick){
                         case 1:
+
                             enemyDamage = objKrev.skillOne();  // Random damage between 10 and 25
                             character.takeDamage(enemyDamage);
                             break;
                         case 2:
+
                             enemyDamage = objKrev.skillTwo(); // Random damage between 10 and 25
                             character.takeDamage(enemyDamage);
                             break;
                         case 3:
+                        
+
                             enemyDamage = objKrev.skillThree();  // Random damage between 10 and 25
                             character.takeDamage(enemyDamage);
                             break;
@@ -243,17 +329,21 @@ public class storyOne {
                     }
                 }
                 
-                objKrev.Krev_Defeat();
+                
 
                 System.out.println("------------------------------------");
 
                 // Check if either has fallen
                 if (character.getHealth() <= 0) {
                     System.out.println(character.getName() + " has fallen. " + objKrev.getName() + " prevails.");
+                    character.defeated = true;
+                    turn_count = 0;
                     break;
                 } else if (objKrev.getHealth() <= 0) {
                     System.out.println(character.getName() + " has defeated " + objKrev.getName() + "\n\n");
-                    // Rewards logic can go here (e.g., coins)
+                    objKrev.Krev_Defeat();
+                    turn_count = 0;
+                    
                     break;
                 }
             } catch (Exception e) {
@@ -262,7 +352,9 @@ public class storyOne {
             }
         }
 
-        // You can add additional logic here for the shop or continue the game
+        
+
+        
     }
     
 }

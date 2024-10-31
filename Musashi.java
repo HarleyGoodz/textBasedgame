@@ -52,6 +52,8 @@ public class Musashi extends Player {
     public int oneHitDelete(){
         
         System.out.println("Musashi uses ONE HIT DELETE! Deals ∞ damage.");
+        System.out.println("");
+        System.out.println("");
         
         return 1000;
     }
@@ -116,7 +118,7 @@ public class Musashi extends Player {
         scanner.nextLine();
 
         System.out.println("-------------------MUSASHI ENDING----------------------------");
-        System.out.println("As he returned to his hometown, he lived happily ever after..."
+        System.out.println("As he returns to his hometown, he lived happily ever after..."
                 + "\n press 'Enter' to end");
         scanner.nextLine();
     }
