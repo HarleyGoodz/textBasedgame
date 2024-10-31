@@ -14,6 +14,8 @@ public class storyThree {
     Anzu objAnzu = new Anzu("Anzu",200);
     Urmahlullu objUrma = new Urmahlullu("Urmahlullu", 200);
     Humbaba objHum = new Humbaba("Humbaba", 200);
+
+    int turn_count = 0;
     
     
     
@@ -53,6 +55,7 @@ public class storyThree {
             System.out.println("2. Use " + character.skillTwoName() + " (35-45 damage, 20 mana)");
             System.out.println("3. Use " + character.skillThreeName() + " (40-50 damage, 30 mana)");
             System.out.println("4. ONE HIT DELETE");
+            System.out.println("------------------------------------------");
             System.out.print("Enter your choice: ");
             
             try {
@@ -61,25 +64,52 @@ public class storyThree {
 
                 int damage = 0;
                 switch (skillChoice) {
-                    case 1:
+                    case 1:         
+                    turn_count++;
+                    System.out.println("------------------------------");
+                    System.out.println("");
+                    System.out.println("Turn count: "+turn_count);
+                    System.out.println("");
+
                         if (character.useMana(10)) {
                             damage = character.skillOne(); // Random damage between 30 and 40
                             objAnzu.takeDamage(damage);
                         }
                         break;
                     case 2:
+                    
+                    turn_count++;
+                    System.out.println("------------------------------");
+                    System.out.println("");
+                    System.out.println("Turn count: "+turn_count);
+                    System.out.println("");
+
                         if (character.useMana(20)) {
                             damage = character.skillTwo(); // Random damage between 35 and 45
                             objAnzu.takeDamage(damage);
                         }
                         break;
                     case 3:
+                    
+                    turn_count++;
+                    System.out.println("------------------------------");
+                    System.out.println("");
+                    System.out.println("Turn count: "+turn_count);
+                    System.out.println("");
+
                         if (character.useMana(30)) {
                             damage = character.skillThree();// Random damage between 40 and 50
                             objAnzu.takeDamage(damage);
                         }
                         break;
                     case 4:
+                    
+                    turn_count++;
+                    System.out.println("------------------------------");
+                    System.out.println("");
+                    System.out.println("Turn count: "+turn_count);
+                    System.out.println("");
+
                         damage = character.oneHitDelete();
                         objAnzu.takeDamage(damage);
                         break;
@@ -100,6 +130,7 @@ public class storyThree {
                 // Check if either has fallen
                 if (character.getHealth() <= 0) {
                     System.out.println(character.getName() + " has fallen. " + objAnzu.getName() + " prevails.");
+                    character.defeated = true;
                     break;
                 } else if (objAnzu.getHealth() <= 0) {
                     System.out.println(character.getName() + " has defeated " + objAnzu.getName() + "\n\n");
@@ -111,6 +142,10 @@ public class storyThree {
                 scanner.nextLine();  // Clear the buffer
             }
         }
+
+        turn_count = 0;
+
+        if(character.defeated != true){
 
     System.out.println("--------------------VICTORY!--------------------------");
     System.out.println("You have successfully defended yourself, but it's not over yet!");
@@ -126,6 +161,7 @@ public class storyThree {
     System.out.println("Brace yourself! PREPARE FOR BATTLE 2!");
     System.out.println("Press 'Enter' to FIGHT");
     scanner.nextLine();
+        
 
         
         
@@ -140,6 +176,7 @@ public class storyThree {
             System.out.println("2. Use " + character.skillTwoName() + " (35-45 damage, 20 mana)");
             System.out.println("3. Use " + character.skillThreeName() + " (40-50 damage, 30 mana)");
             System.out.println("4. ONE HIT DELETE");
+            System.out.println("------------------------------------------");
             System.out.print("Enter your choice: ");
             
             try {
@@ -149,24 +186,52 @@ public class storyThree {
                 int damage = 0;
                 switch (skillChoice) {
                     case 1:
+                    
+                    turn_count++;
+                    System.out.println("------------------------------");
+                    System.out.println("");
+                    System.out.println("Turn count: "+turn_count);
+                    System.out.println("");
+
                         if (character.useMana(10)) {
                             damage = character.skillOne(); // Random damage between 30 and 40
                             objUrma.takeDamage(damage);
                         }
                         break;
                     case 2:
+                    
+                    turn_count++;
+                    System.out.println("------------------------------");
+                    System.out.println("");
+                    System.out.println("Turn count: "+turn_count);
+                    System.out.println("");
+
                         if (character.useMana(20)) {
                             damage = character.skillTwo(); // Random damage between 35 and 45
                             objUrma.takeDamage(damage);
                         }
                         break;
                     case 3:
+                    
+                    turn_count++;
+                    System.out.println("------------------------------");
+                    System.out.println("");
+                    System.out.println("Turn count: "+turn_count);
+                    System.out.println("");
+
                         if (character.useMana(30)) {
                             damage = character.skillThree();// Random damage between 40 and 50
                             objUrma.takeDamage(damage);
                         }
                         break;
                     case 4:
+                    
+                    turn_count++;
+                    System.out.println("------------------------------");
+                    System.out.println("");
+                    System.out.println("Turn count: "+turn_count);
+                    System.out.println("");
+
                         damage = character.oneHitDelete();
                         objUrma.takeDamage(damage);
                         break;
@@ -187,6 +252,7 @@ public class storyThree {
                 // Check if either has fallen
                 if (character.getHealth() <= 0) {
                     System.out.println(character.getName() + " has fallen. " + objUrma.getName() + " prevails.");
+                    character.defeated = true;
                     break;
                 } else if (objUrma.getHealth() <= 0) {
                     System.out.println(character.getName() + " has defeated " + objUrma.getName() + "\n\n");
@@ -198,6 +264,10 @@ public class storyThree {
                 scanner.nextLine();  // Clear the buffer
             }
         }
+
+        turn_count = 0;
+
+        if(character.defeated != true){
         
         while (objHum.getHealth() > 0 && character.getHealth() > 0){
             System.out.println(character.toString());
@@ -210,6 +280,7 @@ public class storyThree {
             System.out.println("2. Use " + character.skillTwoName() + " (35-45 damage, 20 mana)");
             System.out.println("3. Use " + character.skillThreeName() + " (40-50 damage, 30 mana)");
             System.out.println("4. ONE HIT DELETE");
+            System.out.println("------------------------------------------");
             System.out.print("Enter your choice: ");
             
             try {
@@ -219,24 +290,52 @@ public class storyThree {
                 int damage = 0;
                 switch (skillChoice) {
                     case 1:
+                    
+                    turn_count++;
+                    System.out.println("------------------------------");
+                    System.out.println("");
+                    System.out.println("Turn count: "+turn_count);
+                    System.out.println("");
+
                         if (character.useMana(10)) {
                             damage = character.skillOne(); // Random damage between 30 and 40
                             objHum.takeDamage(damage);
                         }
                         break;
                     case 2:
+                    
+                    turn_count++;
+                    System.out.println("------------------------------");
+                    System.out.println("");
+                    System.out.println("Turn count: "+turn_count);
+                    System.out.println("");
+
                         if (character.useMana(20)) {
                             damage = character.skillTwo(); // Random damage between 35 and 45
                             objHum.takeDamage(damage);
                         }
                         break;
                     case 3:
+                    
+                    turn_count++;
+                    System.out.println("------------------------------");
+                    System.out.println("");
+                    System.out.println("Turn count: "+turn_count);
+                    System.out.println("");
+
                         if (character.useMana(30)) {
                             damage = character.skillThree();// Random damage between 40 and 50
                             objHum.takeDamage(damage);
                         }
                         break;
                     case 4:
+                    
+                    turn_count++;
+                    System.out.println("------------------------------");
+                    System.out.println("");
+                    System.out.println("Turn count: "+turn_count);
+                    System.out.println("");
+
                         damage = character.oneHitDelete();
                         objHum.takeDamage(damage);
                         break;
@@ -257,6 +356,7 @@ public class storyThree {
                 // Check if either has fallen
                 if (character.getHealth() <= 0) {
                     System.out.println(character.getName() + " has fallen. " + objHum.getName() + " prevails.");
+                    character.defeated = true;
                     break;
                 } else if (objHum.getHealth() <= 0) {
                     System.out.println(character.getName() + " has defeated " + objHum.getName() + "\n\n");
@@ -268,7 +368,10 @@ public class storyThree {
                 scanner.nextLine();  // Clear the buffer
             }
         }
+        turn_count = 0;
 
+
+        if(character.defeated != true){
         System.out.println("----------------------------------------------");
     System.out.println("After defeating those who attempted to trample your path, you managed to prevail on your adventure,\n"+
      "you travel accross the great mountains, seeking to defeat the 3 headed dragon...");
@@ -294,6 +397,7 @@ public class storyThree {
             System.out.println("2. Use " + character.skillTwoName() + " (35-45 damage, 20 mana)");
             System.out.println("3. Use " + character.skillThreeName() + " (40-50 damage, 30 mana)");
             System.out.println("4. ONE HIT DELETE");
+            System.out.println("------------------------------------------");
             System.out.print("Enter your choice: ");
 
             try {
@@ -303,24 +407,52 @@ public class storyThree {
                 int damage = 0;
                 switch (skillChoice) {
                     case 1:
+                    
+                    turn_count++;
+                    System.out.println("------------------------------");
+                    System.out.println("");
+                    System.out.println("Turn count: "+turn_count);
+                    System.out.println("");
+
                         if (character.useMana(10)) {
                             damage = character.skillOne(); // Random damage between 30 and 40
                             objTia.takeDamage(damage);
                         }
                         break;
                     case 2:
+                    
+                    turn_count++;
+                    System.out.println("------------------------------");
+                    System.out.println("");
+                    System.out.println("Turn count: "+turn_count);
+                    System.out.println("");
+
                         if (character.useMana(20)) {
                             damage = character.skillTwo(); // Random damage between 35 and 45
                             objTia.takeDamage(damage);
                         }
                         break;
                     case 3:
+                    
+                    turn_count++;
+                    System.out.println("------------------------------");
+                    System.out.println("");
+                    System.out.println("Turn count: "+turn_count);
+                    System.out.println("");
+
                         if (character.useMana(30)) {
                             damage = character.skillThree();// Random damage between 40 and 50
                             objTia.takeDamage(damage);
                         }
                         break;
                     case 4:
+                    
+                    turn_count++;
+                    System.out.println("------------------------------");
+                    System.out.println("");
+                    System.out.println("Turn count: "+turn_count);
+                    System.out.println("");
+
                         damage = character.oneHitDelete();
                         objTia.takeDamage(damage);
                         break;
@@ -355,9 +487,11 @@ public class storyThree {
                 // Check if either has fallen
                 if (character.getHealth() <= 0) {
                     System.out.println(character.getName() + " has fallen. " + objTia.getName() + " prevails.");
+                    character.defeated = true;
                     break;
                 } else if (objTia.getHealth() <= 0) {
                     System.out.println(character.getName() + " has defeated " + objTia.getName() + "\n\n");
+                    objTia.Tiamat_Defeat();
                     // Rewards logic can go here (e.g., coins)
                     break;
                 }
@@ -367,7 +501,13 @@ public class storyThree {
             }
         }
 
-        objTia.Tiamat_Defeat();
+        turn_count = 0;
+
+
+
+                }
+            }
+        }
         
     }
 }
